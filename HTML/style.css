@@ -50,6 +50,7 @@ body{
     font-family: 'inknut-antiqua';
 }
 
-.navbar{
+.navbar a{
+    background-color: #FFFF;
     
 }
