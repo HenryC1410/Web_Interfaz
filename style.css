@@ -18,12 +18,6 @@ body{
 }
 
 
-.container{
-    height: 150px;
-    background-color:rgb(235, 69, 95) ;
-}
-
-
 .promocion{/*del fondo de las fresas*/
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
@@ -56,68 +50,3 @@ body{
     font-family: 'inknut-antiqua';
 }
 
-.menu{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo{
-    color: #f9f9f9;
-    font-size: 25px;
-    font-weight: 800px;
-}
-
-.menu .navbar ul li a{
-    font-size: 18px;
-    padding: 20px;
-    color: #f9f9f9;
-    display: block;
-    font-weight: 600px;
-}
-
-.menu .navbar ul li a:hover{
-    color: #E9BABA;
-}
-
-#menu{
-    display: none;
-}
-
-.menu-icono{
-    width: 25px;
-}
-
-.menu label{
-    cursor: pointer;
-    display: none;
-}
-
-.header-contente{
-    text-align: center;
-}
-
-.header-contente h1{
-    font-size: 96px;
-    line-height: 80px;
-    color: #FFFF;
-    margin-bottom: 35px;
-}
-
-.header-contente p{
-    font-size: 40px;
-    color: #FFFF;
-    text-transform: uppercase;
-    padding:0 250px;
-    margin-bottom: 25px;
-}
-.sweet_gropu{
-    display: flex;
-    flex-wrap: wrap;
-    width: 600px;
-    height: 100px;
-}
