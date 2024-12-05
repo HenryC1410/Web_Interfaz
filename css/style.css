@@ -22,7 +22,7 @@ body{
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)),
-        url(imagenes/BG_2.jpg);
+        url(../imagenes/BG_2.jpg);
     background-position: center;
     margin-top: 25px;
     margin-left: 55px;
