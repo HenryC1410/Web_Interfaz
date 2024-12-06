@@ -32,6 +32,7 @@ body{
     min-height: 70vh;
     display: flex;
     align-items: center;
+    border-radius: 10px;
 }
 
 .oferta h2{
@@ -80,8 +81,13 @@ body{
     margin: 10px;
 }
 
+/*para estudio de como hacer esto*/
 .bajo{
-    background-color: #FFFF;
+ background-color: #ffe4e1;
+  background-image: repeating-linear-gradient(70deg, #ffe4e1, #ffe4e1 65px, #fff 50px, #fff 100px);
+  padding: 20px;
+  text-align: center;
+  color: #000;
 }
 
 .centro h2{
@@ -89,18 +95,16 @@ body{
     text-decoration-color: #454545;
     font-size: 26px;
     font-weight: bold;
-    text-align: center;
+    margin-top: 20px;
+    justify-content: center;
 }
 
-.redes{
-    display: inline-block;
-    columns: 4;
-    width: 400px;
-    height: 100px;
-    align-content: center;
-    position: relative;
-    left: 570px;
-}
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    margin-top: 20px;
+  }
 
 .copyri{
     display: flex;
