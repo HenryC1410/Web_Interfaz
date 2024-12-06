@@ -42,6 +42,7 @@ body{
     font-family: 'inknut-antiqua';
 
 }
+
 .oferta p{
     font-size: 32px;
     line-height: 100px;
@@ -50,11 +51,53 @@ body{
     font-family: 'inknut-antiqua';
 }
 
-.navbar a{
-    background-color: #2c2c2c;
-    border-radius: 0.5rem;
+.btn-1{
+    background: #454545;
     color: #FFFF;
+    border-radius: 10px;
+    transition: transform 0.3 ease;
 }
+
+.btn-2{
+    background: #454545;
+    color: #FFFF;
+    border-radius: 10px;
+    transition: transform 0.3 ease;
+}
+
+.btn-3{
+    background: #454545;
+    color: #FFFF;
+    border-radius: 10px;
+    transition: transform 0.3 ease;
+}
+
+.btn{
+    text-decoration: none;
+    padding: 9px 40px;
+    font-size: 15px;
+    position: relative;
+    margin: 10px;
+}
+
 .bajo{
     background-color: #FFFF;
+}
+
+.centro h2{
+    font-family: Inter;
+    text-decoration-color: #454545;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.redes{
+    display: inline-block;
+    columns: 4;
+    width: 400px;
+    height: 100px;
+    align-content: center;
+    position: relative;
+    left: 570px;
 }
