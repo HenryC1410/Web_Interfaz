@@ -8,13 +8,11 @@
     <meta name="description" content="venta de postres">
     <meta name="OG:image" content="imagenes/Icono.png">
     <meta name="autor" content="Henry">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-
-
     <header>
         <div class="p-10 flex flex-row items-center justify-between w-full h-[150px] bg-[#EB455F]">
             <!--la clase del menu-->
@@ -32,6 +30,38 @@
             </div>
         </div>
     </header>
+
+    <form action="https://formsubmit.co/henrygerman53@gmail.com" method="POST">
+
+        <h2>
+            Contacto
+        </h2>
+
+        <div class="input-group">
+
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre" required>
+
+            <label for="phone">Telefono</label>
+            <input type="tel" name="phone" id="phone" placeholder="Telefono" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje" required></textarea>
+
+            <div class="flex text-center justify-between mb-[30px]">
+                <a class="font-semibold text-[14px] text-[#000]" href="#">Politica de privacidad</a>
+                <a class="font-semibold text-[14px] text-[#000]" href="#">Terminos y condiciones</a>
+            </div>
+
+            <input class="btn-5" type="submit" id="submit-btn" value="Enviar">
+
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500">
+            <input type="hidden" name="_captcha" value="false">
+        </div>
+    </form>
 
     <footer class="bajo">
         <section class="Contacto">
