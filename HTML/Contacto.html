@@ -31,7 +31,8 @@
         </div>
     </header>
 
-    <form action="https://formsubmit.co/henrygerman53@gmail.com" method="POST">
+
+    <form id="contact-form" action="https://formsubmit.co/henrygerman53@gmail.com" method="POST">
 
         <h2>
             Contacto
@@ -56,12 +57,13 @@
                 <a class="font-semibold text-[14px] text-[#000]" href="#">Terminos y condiciones</a>
             </div>
 
-            <input class="btn-5" type="submit" id="submit-btn" value="Enviar">
+            <input class="btn-5" type="submit" id="submit-btn" value="Enviar" disabled>
 
             <input type="hidden" name="_next" value="http://127.0.0.1:5500">
             <input type="hidden" name="_captcha" value="false">
         </div>
     </form>
+
 
     <footer class="bajo">
         <section class="Contacto">
@@ -103,5 +105,7 @@
                 </div>
             </div>
     </footer>
+
+    <script src="../JavaScript/script.js"></script>
 </body>
 </html>
