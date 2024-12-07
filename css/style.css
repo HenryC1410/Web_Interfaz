@@ -20,8 +20,8 @@ body{
 
 .promocion{/*del fondo de las fresas*/
     background-image: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)),
+        rgb(0,0,0,0.7),
+        rgb(0,0,0,0.7)),
         url(../imagenes/BG_2.jpg);
     background-position: center;
     margin-top: 25px;
@@ -35,20 +35,26 @@ body{
     border-radius: 10px;
 }
 
+.oferta{ 
+
+    width: 1370px;
+    height: 460px;
+    padding: 150px;
+}
+
 .oferta h2{
     font-size: 64px;
     line-height: 70px;
     color: #FFFF;
-    margin-left: 300px;
+    margin-left: 190px;
     font-family: 'inknut-antiqua';
-
 }
 
 .oferta p{
     font-size: 32px;
-    line-height: 100px;
+    line-height: 95px;
     color: #FFFF;
-    margin-left: 450px;
+    margin-left: 350px;
     font-family: 'inknut-antiqua';
 }
 
@@ -58,12 +64,18 @@ body{
     border-radius: 10px;
     transition: transform 0.3 ease;
 }
+.btn-1:hover{
+    background-color: #5c5b5b;
+}
 
 .btn-2{
     background: #454545;
     color: #FFFF;
     border-radius: 10px;
     transition: transform 0.3 ease;
+}
+.btn-2:hover{
+    background-color: #5c5b5b;
 }
 
 .btn-3{
@@ -72,6 +84,9 @@ body{
     border-radius: 10px;
     transition: transform 0.3 ease;
 }
+.btn-3:hover{
+    background-color: #5c5b5b;
+}
 
 .btn{
     text-decoration: none;
@@ -79,6 +94,88 @@ body{
     font-size: 15px;
     position: relative;
     margin: 10px;
+}
+
+.produ{
+    padding: 10px 9px;
+    background-color: #CDB4DB;
+    position: relative;
+    margin: 30px;
+    border-radius: 5px;
+    right: 10px;
+}
+
+.fresas_crem{
+    text-align: center;
+}
+.fresas_crem h3{
+    font-size: 35px;
+    font-family: Inria-Serif;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.fresas_crem p{
+    font-size: 25px;
+    font-family: Inria-Serif;
+    color: #000;
+    margin-top: 15px;
+}
+
+.batido{
+    text-align: center;
+}
+.batido h3{
+    font-size: 35px;
+    font-family: Inria-Serif;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.batido p{
+    font-size: 25px;
+    font-family: Inria-Serif;
+    color: #000;
+    margin-top: 15px;
+}
+
+.pinchos{
+    text-align: center;
+}
+.pinchos h3{
+    font-size: 35px;
+    font-family: Inria-Serif;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.pinchos p{
+    font-size: 25px;
+    font-family: Inria-Serif;
+    color: #000;
+    margin-top: 15px;
+}
+
+.btn-4{
+    background: #A2D2FF;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    position: relative;
+    margin: 10px;
+    border-radius: 4px;
+    padding: 20px 60px;
+    transition: transform 0.3 ease;
+    left: 450px;
+    font-family: Inter;
+    font-weight: 700;
+    text-align: center;
+    
+}
+
+.btn-4:hover{
+    background-color: #BDE0FE;
 }
 
 /*para estudio de como hacer esto*/

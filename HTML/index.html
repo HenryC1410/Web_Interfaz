@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
+     <link rel="stylesheet" href="../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="w-screen h-screen">
@@ -29,47 +29,53 @@
             </div>
         </div>
     </header>
-    <div class="flex flex-col items-center md:from  justify-evenly h-[70vh] mx-[60px] mt-[250px] absolute inset-0  bg-gray-900 bg-opacity-65  ">
+    <div class="flex flex-col items-center md:from justify-evenly h-[70vh] mx-[45px] ml-[60px] mt-[250px] absolute inset-0 bg-cover bg-gray-900 bg-opacity-65 ">
         <h1 class="text-8xl font-[inknut-antiqua] font-bold text-cyan-50 ">Sweet Moment</h1>
         <p class="text-4xl font-[inknut-antiqua] text-cyan-50 ">
             Dandote los mejores postres para los momentos mas dulces
             de tu vida
         </p>
     </div>
-    <div class=" flex flex-col items-center md:from justify-evenly h-[70vh] mx-[60px] mt-[100px]  bg-fixed" style="background-image: url('../imagenes/BG.png');">
+    <div class=" flex flex-col items-center md:from justify-evenly h-[70vh] mx-[60px] mt-[100px] bg-cover bg-fixed" style="background-image: url('../imagenes/BG.png');">
 
     </div>
-
-    <a href="#">
-        <section class="promocion">
+    <section class="promocion">
+        <a href="#">
             <div class="oferta">
                 <h2>Ofertas de tiempo limitado</h2>
                 <p>
                     En productos seleccionados
                 </p>
-            </div>
-        </section>
-    </a>
+          </div>
+        </a>
+    </section>
 
-    <section class="pt-4">
+    <section class="produ">
         <div class=" sweet-container">
-            <h2 class="italic text-6xl font-[Inria-Serif] text-[#2B3467] font-medium">Nuestros Productos:</h2>
+            <h2 class="italic text-6xl font-[Inria-Serif] text-[#000] font-medium">Nuestros Productos:</h2>
         </div>
         <div class="grid grid-cols-3 p-10 gap-10 h-fit mx-[35px]">
-            <div>
+
+            <div class="fresas_crem">
+                <h3>Fresas con crema</h3>
                 <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_1.png" alt="">
+                <p>Delisiosas fresas frescas con una dulce crema de leche</p>
             </div>
-            <div>
+            <div class="batido">
+                <h3>Batido de fresas</h3>
                 <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_2.jpg" alt="">
+                <p>Batido de fresas con leche y esencia de vainilla para pasar un dulce momento</p>
             </div>
-            <div>
+            <div class="pinchos">
+                <h3>Pinchos de fresas</h3>
                 <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_3.jpg" alt="">
+                <p>Fresas ensartadas bañadas en chocolate negro con decoracion</p>
             </div>
+            <a class="btn-4" href="#">Más Productos</a>
         </div>
     </section>
 
     <footer class="bajo">
-       
         <section class="Contacto">
             <div>
                 <h2 class="text-6xl font-[inknut-antiqua] font-extrabold text-center">Sweet Moment</h2>
