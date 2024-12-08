@@ -58,6 +58,21 @@ body{
     font-family: 'inknut-antiqua';
 }
 
+header .navbar{
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar ion-icon{
+    justify-content: center;
+    align-items: center;
+    top: 18px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
 .btn-1{
     background: #454545;
     color: #FFFF;
@@ -65,16 +80,6 @@ body{
     transition: transform 0.3 ease;
 }
 .btn-1:hover{
-    background-color: #5c5b5b;
-}
-
-.btn-2{
-    background: #454545;
-    color: #FFFF;
-    border-radius: 10px;
-    transition: transform 0.3 ease;
-}
-.btn-2:hover{
     background-color: #5c5b5b;
 }
 
