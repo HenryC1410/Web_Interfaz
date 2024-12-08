@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Moment</title>
-    <link rel="icon" href="../imagenes/Icono.png" type="image/png">
+    <link rel="icon" href="imagenes/Icono.png" type="image/png">
     <meta name="description" content="venta de postres">
     <meta name="OG:image" content="imagenes/Icono.png">
     <meta name="autor" content="Henry">
@@ -12,25 +13,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="w-screen h-screen">
 
     <header>
         <div class="p-10 flex flex-row items-center justify-between w-full h-[150px] bg-[#EB455F]">
             <!--la clase del menu-->
             <div class="flex flex-row items-center gap-2.5">
-                <a href="../index.html">
+                <a href="../HTML/Hero_Sesion.html">
                     <img class="w-[120px] h-[120px]" src="../imagenes/Icono.png" class="menu-icono" alt="">
                 </a>
             </div>
             <div class="navbar">
                 <nav>
-                    <a href="../HTML/Registrarse.html" class="btn btn-1">Registrarse</a>
-                    <a href="../HTML/Inicio.html" class="btn btn-2">Login</a>
-                    <a href="../HTML/Contacto.html" class="btn btn-3">Contacto</a>
+                    <a href="../HTML/Contacto_sesion.html" class="btn btn-3">Contacto</a>
+                    <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+                    <a href="../HTML/Perfil.html"><ion-icon name="person-circle-outline"></ion-icon></a>
+                    <a href="../index.html" class="btn btn-1">Cerrar Sesion</a>
                 </nav>
             </div>
         </div>
     </header>
+    <div class="flex flex-col items-center md:from justify-evenly h-[70vh] mx-[45px] ml-[60px] mt-[250px] absolute inset-0 bg-cover bg-gray-900 bg-opacity-65 ">
+        <h1 class="text-8xl font-[inknut-antiqua] font-bold text-cyan-50 ">Sweet Moment</h1>
+        <p class="text-4xl font-[inknut-antiqua] text-cyan-50 ">
+            Dandote los mejores postres para los momentos mas dulces
+            de tu vida
+        </p>
+    </div>
+    <div class=" flex flex-col items-center md:from justify-evenly h-[70vh] mx-[60px] mt-[100px] bg-cover bg-fixed" style="background-image: url('../imagenes/BG.png');">
+
+    </div>
+    <section class="promocion">
+        <a href="../HTML/Ofertas.html">
+            <div class="oferta">
+                <h2>Ofertas de tiempo limitado</h2>
+                <p>
+                    En productos seleccionados
+                </p>
+          </div>
+        </a>
+    </section>
+
+    <section class="produ">
+        <div class=" sweet-container">
+            <h2 class="italic text-6xl font-[Inria-Serif] text-[#000] font-medium">Nuestros Productos:</h2>
+        </div>
+        <div class="grid grid-cols-3 p-10 gap-10 h-fit mx-[35px]">
+
+            <div class="fresas_crem">
+                <h3>Fresas con crema</h3>
+                <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_1.png" alt="">
+                <p>Delisiosas fresas frescas con una dulce crema de leche</p>
+            </div>
+            <div class="batido">
+                <h3>Batido de fresas</h3>
+                <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_2.jpg" alt="">
+                <p>Batido de fresas con leche y esencia de vainilla para pasar un dulce momento</p>
+            </div>
+            <div class="pinchos">
+                <h3>Pinchos de fresas</h3>
+                <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_3.jpg" alt="">
+                <p>Fresas ensartadas bañadas en chocolate negro con decoracion</p>
+            </div>
+            <a class="btn-4" href="../HTML/Productos.html">Más Productos</a>
+        </div>
+    </section>
 
     <footer class="bajo">
         <section class="Contacto">
@@ -72,15 +119,18 @@
                 </div>
                 <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
                 <div>
-                    <h3 class="pol"><a href="../HTML/Politica-Privacidad.html"> Políticas de Privacidad</a></h3>
+                    <h3 class="pol"><a href="../HTML/Politicas_sesion.html"> Políticas de Privacidad</a></h3>
                 </div>
                 <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
 
                 <div>
-                    <h3 class="ter"><a href="../HTML/Terminos-Condiciones.html">Términos y Condiciones</a></h3>
+                    <h3 class="ter"><a href="../HTML/Terminos_sesion.html">Términos y Condiciones</a></h3>
                 </div>
             </div>
     </footer>
-    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
