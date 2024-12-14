@@ -8,29 +8,51 @@
     <meta name="description" content="venta de postres">
     <meta name="OG:image" content="imagenes/Icono.png">
     <meta name="autor" content="Henry">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_6.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
-    <header>
-        <div class="p-10 flex flex-row items-center justify-between w-full h-[150px] bg-[#EB455F]">
-            <!--la clase del menu-->
-            <div class="flex flex-row items-center gap-2.5">
-                <a href="../index.html">
-                    <img class="w-[120px] h-[120px]" src="../imagenes/Icono.png" class="menu-icono" alt="">
-                </a>
-            </div>
-            <div class="navbar">
-                <nav>
-                    <a href="../HTML/Registrarse.html" class="btn btn-1">Registrarse</a>
-                    <a href="../HTML/Inicio.html" class="btn btn-2">Login</a>
-                    <a href="../HTML/Contacto.html" class="btn btn-3">Contacto</a>
-                </nav>
+    <header id="header">
+        <a href="../index.html"><img src="../imagenes/Icono.png" class="logo" alt=""></a>
+
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </label>
+
+        <ul class="menu">
+            <a href="../index.html"><li class="item btn">Inicio</li></a>
+            <a href="Productos.html"><li class="item btn">Productos</li></a>
+            <a href="Contacto.html"><li class="item btn">Contacto</li></a>
+            <a href="Inicio.html"><li class="perfil"><ion-icon name="person-outline"></ion-icon></li></a>
+            <a href="Inicio.html"><li class="item ini">Login</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <h1>Productos</h1>
+        <div class="row">
+            <div class="col-xs-12">
+                <form>
+                    <input class="search-input" type="search" name="search" placeholder="Busca el producto">
+                </form>
+                <select class="select-order">
+                    <option >Precio más bajo</option>
+                    <option>Precio más alto</option>
+                    <option>Por descuento</option>
+                    <option>Por opiniones</option>
+                </select>
             </div>
         </div>
-    </header>
+
+        <div class="row">
+            <a href="#" class="col-m-4 col-s-6 product-box">
+                <img src="../imagenes/producto_1.png" alt="producto 1">
+            </a>
+        </div>
+    </main>
 
     <footer class="bajo">
         <section class="Contacto">
@@ -81,6 +103,10 @@
                 </div>
             </div>
     </footer>
-    
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../JavaScript/script_4.js"></script>
 </body>
 </html>

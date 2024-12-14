@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Moment</title>
-    <link rel="icon" href="imagenes/Icono.png" type="image/png">
+    <link rel="icon" href="../imagenes/Icono.png" type="image/png">
     <meta name="description" content="venta de postres">
     <meta name="OG:image" content="imagenes/Icono.png">
     <meta name="autor" content="Henry">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_5.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -23,6 +23,12 @@
                     <img class="w-[120px] h-[120px]" src="../imagenes/Icono.png" class="menu-icono" alt="">
                 </a>
             </div>
+
+            <div class="buscar">
+                <input type="text" placeholder="Buscar..." id="search">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+
             <div class="navbar">
                 <nav>
                     <a href="../HTML/Contacto_sesion.html" class="btn btn-3">Contacto</a>
@@ -55,27 +61,36 @@
     </section>
 
     <section class="produ">
-        <div class=" sweet-container">
+        <div class="sweet-container">
             <h2 class="italic text-6xl font-[Inria-Serif] text-[#000] font-medium">Nuestros Productos:</h2>
         </div>
         <div class="grid grid-cols-3 p-10 gap-10 h-fit mx-[35px]">
-
-            <div class="fresas_crem">
+    
+            <div class="product fresas_crem relative group">
                 <h3>Fresas con crema</h3>
-                <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_1.png" alt="">
+                <div class="image-container relative overflow-hidden">
+                    <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_1.png" alt="">
+                </div>
                 <p>Delisiosas fresas frescas con una dulce crema de leche</p>
             </div>
-            <div class="batido">
+    
+            <div class="product batido relative group">
                 <h3>Batido de fresas</h3>
-                <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_2.jpg" alt="">
+                <div class="image-container relative overflow-hidden">
+                    <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_2.jpg" alt="">
+                </div>
                 <p>Batido de fresas con leche y esencia de vainilla para pasar un dulce momento</p>
             </div>
-            <div class="pinchos">
+    
+            <div class="product pinchos relative group">
                 <h3>Pinchos de fresas</h3>
-                <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_3.jpg" alt="">
+                <div class="image-container relative overflow-hidden">
+                    <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_3.jpeg" alt="">
+                </div>
                 <p>Fresas ensartadas bañadas en chocolate negro con decoracion</p>
             </div>
-            <a class="btn-4" href="../HTML/Productos.html">Más Productos</a>
+    
+            <a class="btn-4" href="HTML/Productos.html">Más Productos</a>
         </div>
     </section>
 
