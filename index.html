@@ -8,37 +8,38 @@
     <link rel="icon" href="imagenes/Icono.png" type="image/png">
     <meta name="description" content="venta de postres">
     <meta name="OG:image" content="imagenes/Icono.png">
-    <meta name="autor" content="Henry">
+    <meta name="autor" content="Henry, Kevin, Andres y">
     <link rel="stylesheet" href="../css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="w-screen h-screen">
 
-    <header>
-        <div class="p-10 flex flex-row items-center justify-between w-full h-[150px] bg-[#EB455F]">
-            <!--la clase del menu-->
-            <div class="flex flex-row items-center gap-2.5">
-                <a href="index.html">
-                    <img class="w-[120px] h-[120px]" src="../imagenes/Icono.png" class="menu-icono" alt="">
-                </a>
-            </div>
-            <div class="navbar">
-                <nav>
-                    <a href="HTML/Contacto.html" class="btn btn-3">Contacto</a>
-                    <a href="HTML/Inicio.html"><ion-icon name="person-circle-outline"></ion-icon></a>
-                </nav>
-            </div>
-        </div>
+    <header id="header">
+        <img src="../imagenes/Icono.png" class="logo" alt="">
+
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </label>
+
+        <ul class="menu">
+            <a href="../index.html"><li class="item btn">Inicio</li></a>
+            <a href="HTML/Productos.html"><li class="item btn">Productos</li></a>
+            <a href="HTML/Contacto.html"><li class="item btn">Contacto</li></a>
+            <a href="HTML/Inicio.html"><li class="perfil"><ion-icon name="person-outline"></ion-icon></li></a>
+            <a href=""><li class="item ini">Login</li></a>
+        </ul>
     </header>
-    <div class="flex flex-col items-center md:from justify-evenly h-[70vh] mx-[45px] ml-[60px] mt-[250px] absolute inset-0 bg-cover bg-gray-900 bg-opacity-65 ">
+    
+    <div class="flex flex-col items-center md:from justify-evenly h-[70vh] mx-[45px] ml-[60px] mt-[150px] absolute inset-0 bg-cover bg-gray-900 bg-opacity-65 ">
         <h1 class="text-8xl font-[inknut-antiqua] font-bold text-cyan-50 ">Sweet Moment</h1>
         <p class="text-4xl font-[inknut-antiqua] text-cyan-50 ">
             Dandote los mejores postres para los momentos mas dulces
             de tu vida
         </p>
     </div>
-    <div class=" flex flex-col items-center md:from justify-evenly h-[70vh] mx-[60px] mt-[100px] bg-cover bg-fixed" style="background-image: url('../imagenes/BG.png');">
+    <div class=" flex flex-col items-center md:from justify-evenly h-[70vh] mx-[60px] mt-[150px] bg-cover bg-fixed" style="background-image: url('../imagenes/BG.png');">
 
     </div>
     <section class="promocion">
@@ -53,26 +54,35 @@
     </section>
 
     <section class="produ">
-        <div class=" sweet-container">
+        <div class="sweet-container">
             <h2 class="italic text-6xl font-[Inria-Serif] text-[#000] font-medium">Nuestros Productos:</h2>
         </div>
         <div class="grid grid-cols-3 p-10 gap-10 h-fit mx-[35px]">
-
-            <div class="fresas_crem">
+    
+            <div class="product fresas_crem relative group">
                 <h3>Fresas con crema</h3>
-                <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_1.png" alt="">
+                <div class="image-container relative overflow-hidden">
+                    <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_1.png" alt="">
+                </div>
                 <p>Delisiosas fresas frescas con una dulce crema de leche</p>
             </div>
-            <div class="batido">
+    
+            <div class="product batido relative group">
                 <h3>Batido de fresas</h3>
-                <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_2.jpg" alt="">
+                <div class="image-container relative overflow-hidden">
+                    <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_2.jpg" alt="">
+                </div>
                 <p>Batido de fresas con leche y esencia de vainilla para pasar un dulce momento</p>
             </div>
-            <div class="pinchos">
+    
+            <div class="product pinchos relative group">
                 <h3>Pinchos de fresas</h3>
-                <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_3.jpg" alt="">
+                <div class="image-container relative overflow-hidden">
+                    <img class="w-[404px] h-[366px] rounded-md" src="../imagenes/producto_3.jpeg" alt="">
+                </div>
                 <p>Fresas ensartadas bañadas en chocolate negro con decoracion</p>
             </div>
+    
             <a class="btn-4" href="HTML/Productos.html">Más Productos</a>
         </div>
     </section>
@@ -126,7 +136,8 @@
                 </div>
             </div>
     </footer>
-
+    
+    <script src="JavaScript/script_3.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
