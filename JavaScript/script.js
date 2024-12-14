@@ -2,17 +2,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
     const inputs = form.querySelectorAll('input:not([type="hidden"]), textarea');
+    const termsCheckbox = document.getElementById('terms-checkbox');
 
-    // Función para verificar si todos los campos están llenos
+    // Función para verificar si todos los campos y el checkbox están completos
     const checkInputs = () => {
         let allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-        submitBtn.disabled = !allFilled; // Habilita o deshabilita el botón
+        let checkboxChecked = termsCheckbox.checked;
+        submitBtn.disabled = !(allFilled && checkboxChecked); // Habilita o deshabilita el botón
     };
 
     // Evento de entrada para validar en tiempo real
     inputs.forEach(input => {
         input.addEventListener('input', checkInputs);
     });
+
+    termsCheckbox.addEventListener('change', checkInputs);
 
     // Evento al enviar el formulario
     form.addEventListener('submit', (e) => {
