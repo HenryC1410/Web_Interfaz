@@ -50,7 +50,7 @@ form{
     padding: 20px 55px;
     border-radius: 20px;
     text-align: center;
-    width: 500px;
+    width: 600px;
     margin-bottom: 20px;
     margin-top: 20px;
     background-color: #e8d1c5 ;
@@ -91,6 +91,50 @@ form input::placeholder, form textarea::placeholder{
     color: #B5CAB6;
 }
 
+.acepto{
+    font-family: Inter;
+    font-weight: 600;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-container .checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox-container .checkmark ion-icon {
+    font-size: 20px;
+    color: transparent;
+    pointer-events: none;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark {
+    background-color: #ffc6ff;
+    border-color: #ffc6ff ;
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkmark ion-icon {
+    color: #000;
+}
+
+
 .btn-5[disabled] {
     background-color: grey;
     cursor: not-allowed;
@@ -105,6 +149,7 @@ form input::placeholder, form textarea::placeholder{
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 .btn-5:hover{
     background-color: #fff1e6;
