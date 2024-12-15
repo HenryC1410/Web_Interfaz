@@ -48,12 +48,13 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    height: 100px;
+    height: 150px;
     background-color:#EB455F ;
 }
 
 .logo{
-    height: 100px;
+    height: 130px;
+    width: 130px;
 }
 
 .menu{

@@ -19,12 +19,13 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    height: 100px;
+    height: 150px;
     background-color:#EB455F ;
 }
 
 .logo{
-    height: 100px;
+    height: 130px;
+    width: 130px;
 }
 
 .menu{
@@ -76,7 +77,7 @@ label{
 }
 
 /* Ocultar el menú desplegable por defecto */
-.dropdown-menu {
+.dropdown .dropdown-menu {
     display: none;
     position: absolute;
     background-color: #fff;
@@ -84,6 +85,7 @@ label{
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
+    right: 0%;
 }
 
 /* Estilo para mostrar el menú cuando tiene la clase 'show' */
@@ -91,23 +93,28 @@ label{
     display: block;
 }
 
-/* Estilo de los elementos del menú */
-.dropdown-menu li {
+/* Estilo de los elementos del menú desplegable */.dropdown-menu li {
     list-style: none;
     padding: 10px;
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 
-.dropdown-menu li a {
+.dropdown .dropdown-menu li a {
     text-decoration: none;
     color: #333;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre icono y texto */
 }
 
 /* Cambiar color al pasar el cursor */
 .dropdown-menu li:hover {
     background-color: #f2f2f2;
+    border-radius: 5px;
 }
+
 
 /* Estilo del overlay */
 .overlay {

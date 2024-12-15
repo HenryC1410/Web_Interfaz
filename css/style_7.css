@@ -17,18 +17,17 @@ body{
 
 header{
     width: 100%;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    height: 100px;
+    height: 150px;
     background-color:#EB455F ;
 }
 
 .logo{
-    height: 100px;
+    height: 130px;
+    width: 130px;
 }
 
 .menu{
@@ -67,13 +66,13 @@ ion-icon:hover{
     color: #FFFFFF;
 }
 
-label{
+header label{
     cursor: pointer;
     display: none;
 }
 
 /* Estilo del contenedor dropdown */
-.dropdown {
+header .dropdown {
     position: relative;
     display: inline-block;
 }
@@ -87,6 +86,7 @@ label{
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
+    right: 0%;
 }
 
 /* Estilo para mostrar el menú cuando tiene la clase 'show' */
@@ -94,23 +94,30 @@ label{
     display: block;
 }
 
-/* Estilo de los elementos del menú */
+/* Estilo de los elementos del menú desplegable */
 .dropdown-menu li {
     list-style: none;
     padding: 10px;
     text-align: left;
+    display: flex;
+    align-items: center;
+    
 }
 
 .dropdown-menu li a {
     text-decoration: none;
     color: #333;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre icono y texto */
 }
 
 /* Cambiar color al pasar el cursor */
 .dropdown-menu li:hover {
     background-color: #f2f2f2;
+    border-radius: 5px;
 }
+
 
 /* Estilo del overlay */
 .overlay {
@@ -163,12 +170,123 @@ label{
     display: none;
 }
 
+
+body .container {
+    display: flex;
+    margin: 20px auto;
+    max-width: 1000px;
+    margin-top: 60px;
+}
+.sidebar {
+    width: 250px;
+    background-color:  #c9a793;
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+}
+.sidebar h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.sidebar a {
+    display: block;
+    color: #000000;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sidebar a:hover, .sidebar a.active {
+    background-color: #d2cdca;
+}
+.user-menu {
+    flex-grow: 1;
+    background-color: #d9C5BA ;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.hidden {
+    display: none;
+}
+.user-menu h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+.profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 300px;
+    margin-top: 10px;
+}
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+.info-section {
+    margin-bottom: 10px;
+}
+.info-section p{
+    margin-top: 20px;
+}
+.info-section strong {
+    color: #495057;
+    font-weight: 700;
+    
+}
+.info-section input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #d2cdca;
+    background-color:  #E7E2E0;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.cer h2{
+    margin-bottom: 20px;
+}
+.cer p{
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+.buttons button {
+    padding: 10px 30px;
+    background-color: #c9a793;
+    margin: 10px 10px;
+    border-radius: 8px;
+    font-weight: 550;
+}
+
+.buttons button:hover{
+    background-color: #d2cdca;
+    box-shadow: 0 0 2px black;
+}
+
 .bajo{
     background-color: #ffe4e1;
      background-image: repeating-linear-gradient(70deg, #ffe4e1, #ffe4e1 65px, #fff 50px, #fff 100px);
      padding: 20px;
      text-align: center;
      color: #000;
+     margin-top: 100px;
    }
    
    .centro h2{
