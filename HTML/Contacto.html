@@ -13,23 +13,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-        <div class="p-10 flex flex-row items-center justify-between w-full h-[150px] bg-[#EB455F]">
-            <!--la clase del menu-->
-            <div class="flex flex-row items-center gap-2.5">
-                <a href="../index.html">
-                    <img class="w-[120px] h-[120px]" src="../imagenes/Icono.png" class="menu-icono" alt="">
-                </a>
-            </div>
-            <div class="navbar">
-                <nav>
-                    <a href="../HTML/Contacto.html" class="btn btn-3">Contacto</a>
-                    <a href="../HTML/Inicio.html"><ion-icon name="person-circle-outline"></ion-icon></a>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <header id="header">
+        <a href="../index.html"><img src="../imagenes/Icono.png" class="logo" alt=""></a>
 
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </label>
+
+        <ul class="menu">
+            <a href="../index.html"><li class="item">Inicio</li></a>
+            <a href="Productos.html"><li class="item">Productos</li></a>
+            <a href="Contacto.html"><li class="item">Contacto</li></a>
+            <a href="#"><ion-icon class="menu_ion" name="cart-outline"></ion-icon></a>
+            <a href="Inicio.html"><li class="perfil"><ion-icon class="menu_ion" name="person-outline"></ion-icon></li></a>
+            <a href=""><li class="item ini">Login</li></a>
+        </ul>
+    </header>
 
 <form id="contact-form" action="https://formsubmit.co/henrygerman53@gmail.com" method="POST">
     <h2>Contacto</h2>
@@ -56,7 +56,7 @@
             <label class="checkbox-container">
                 <input type="checkbox" id="terms-checkbox">
                 <span class="checkmark">
-                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    <ion-icon class="check" name="checkmark-circle-outline"></ion-icon>
                 </span>
                 Acepto los <a href="../HTML/Terminos-Condiciones.html">Términos y Condiciones</a> y las <a href="../HTML/Politica-Privacidad.html">Políticas de Privacidad</a>
             </label>
