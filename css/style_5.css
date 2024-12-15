@@ -97,7 +97,7 @@ header{
     display: none;
 }
 
-ion-icon{
+.menu_ion{
     width: 35px;
     height: 35px;
     color: #000;
@@ -107,8 +107,22 @@ ion-icon{
     margin: 0 10px;
 }
 
-ion-icon:hover{
+.menu_ion:hover{
     color: #FFFFFF;
+}
+
+.des{
+    width: 35px;
+    height: 35px;
+    color: #000;
+    position: relative;
+    left: 6px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.des:hover{
+    color: #000;
 }
 
 label{
@@ -159,6 +173,7 @@ label{
 /* Cambiar color al pasar el cursor */
 .dropdown-menu li:hover {
     background-color: #f2f2f2;
+    border-radius: 5px;
 }
 /* Estilo del overlay */
 .overlay {
@@ -184,6 +199,28 @@ label{
     max-width: 400px;
 }
 
+.til{
+
+    font-weight: 800;
+}
+
+.overlay-content ul li{
+    font-weight: 700;
+}
+
+.close{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.close img{
+    width: 140px;
+    height: 140px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* Botones del overlay */
 .overlay-buttons {
     margin-top: 20px;
@@ -198,13 +235,25 @@ label{
 }
 
 .overlay-buttons .btn:first-child {
-    background-color: #f44336; /* Botón de confirmar (rojo) */
-    color: white;
+    background-color: #c9a793; /* Botón de confirmar (rojo) */
+    color: black;
+    font-weight: 600;
+}
+
+.overlay-buttons .btn:first-child:hover{
+    background-color: #ff70a6;
+    color: #FFFFFF;
 }
 
 .overlay-buttons .btn:last-child {
     background-color: #ddd; /* Botón de cancelar (gris) */
     color: black;
+    font-weight: 600;
+}
+
+.overlay-buttons .btn:last-child:hover{
+    background-color: #d57e87;
+    color: #FFFFFF;
 }
 
 .ini{

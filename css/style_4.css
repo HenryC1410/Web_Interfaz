@@ -32,7 +32,7 @@ section .container{
     width: 1200px;
     height: 800px;
     display: flex; 
-    background-color: #a2d2ff;
+    background-color: #f9c2d0 ;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
@@ -90,7 +90,7 @@ section .container{
     align-items: center;
     gap: 8px;
     padding: 0 15px;
-    background-color:  #9bf6ff ;
+    background-color: #ddaf8a ;
     border-radius: 10px;
 
 }
@@ -101,6 +101,13 @@ section .container{
     width: 100%;
     height: 100%;
     background-color: inherit;
+    font-weight: 600;
+    
+}
+
+.container-input input ::placeholder{
+    color: #000;
+    text-align: center;
 }
 
 .container-input ion-icon{
@@ -122,7 +129,7 @@ section .container{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    background-color: #3AB397;
+    background-color: #ee4e8e;
     color: #000;
     font-weight: 600;
 }
@@ -130,6 +137,13 @@ section .container{
 .button:hover{
     background-color: #ff70a6;
     color: #FFFFFF;
+}
+
+.re:hover{
+    text-decoration: underline;
+    font-weight: 600;
+    text-decoration-color: #000000;
+    text-decoration-thickness: 3px;
 }
 
 .sign-up{
@@ -154,7 +168,7 @@ section .container{
     align-items: center;
     justify-content: center;
     transform: translateX(100%);
-    background-color: #ffc6ff;
+    background-color: #d57e87 ;
     overflow: hidden;
     transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
     border-radius: 50% 0 0 50%;
@@ -173,7 +187,7 @@ section .container{
 .container.toggle .container-welcome{
     transform: translateX(0);
     border-radius: 0 50% 50% 0;
-    background-color: #cdb4db;
+    background-color: #f1c2b4;
 }
 
 .container-welcome .welcome{
