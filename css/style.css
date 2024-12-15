@@ -17,24 +17,6 @@ body{
     background-color: rgb(233, 186, 186);/*fondo de la pagina*/
 }
 
-
-.promocion{/*del fondo de las fresas*/
-    background-image: linear-gradient(
-        rgb(0,0,0,0.7),
-        rgb(0,0,0,0.7)),
-        url(../imagenes/BG_2.jpg);
-    background-position: center;
-    margin-top: 25px;
-    margin-left: 55px;
-    margin-right: 70px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-}
-
 .oferta{ 
 
     width: 1370px;
@@ -60,7 +42,6 @@ body{
 
 header{
     width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -104,6 +85,7 @@ ion-icon{
     position: relative;
     left: 6px;
     cursor: pointer;
+    margin: 0 15px;
 }
 
 ion-icon:hover{

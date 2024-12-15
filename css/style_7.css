@@ -1,0 +1,223 @@
+
+*{
+    margin: 0;/**/
+    padding: 0;/**/
+    box-sizing: border-box;/**/
+    text-decoration: none;/*elimina las lineas de enlace */
+    list-style: none;/*quita las bolitas de la lista*/
+}
+
+body{
+    font-family: 'inknut-antiqua', sans-serif;/*tipo de letra*/
+}
+
+body{
+    background-color: rgb(233, 186, 186);/*fondo de la pagina*/
+}
+
+header{
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 100px;
+    background-color:#EB455F ;
+}
+
+.logo{
+    height: 100px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    padding: 10px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.item:hover{
+    color: #fff;
+}
+
+#menu{
+    display: none;
+}
+
+ion-icon{
+    width: 35px;
+    height: 35px;
+    color: #000;
+    position: relative;
+    left: 6px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+ion-icon:hover{
+    color: #FFFFFF;
+}
+
+label{
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilo del contenedor dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Ocultar el menú desplegable por defecto */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Estilo para mostrar el menú cuando tiene la clase 'show' */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Estilo de los elementos del menú */
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* Cambiar color al pasar el cursor */
+.dropdown-menu li:hover {
+    background-color: #f2f2f2;
+}
+
+/* Estilo del overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Contenido del overlay */
+.overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Botones del overlay */
+.overlay-buttons {
+    margin-top: 20px;
+}
+
+.overlay-buttons .btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay-buttons .btn:first-child {
+    background-color: #f44336; /* Botón de confirmar (rojo) */
+    color: white;
+}
+
+.overlay-buttons .btn:last-child {
+    background-color: #ddd; /* Botón de cancelar (gris) */
+    color: black;
+}
+
+.ini{
+    display: none;
+}
+
+.bajo{
+    background-color: #ffe4e1;
+     background-image: repeating-linear-gradient(70deg, #ffe4e1, #ffe4e1 65px, #fff 50px, #fff 100px);
+     padding: 20px;
+     text-align: center;
+     color: #000;
+   }
+   
+   .centro h2{
+       font-family: Inter;
+       text-decoration-color: #454545;
+       font-size: 26px;
+       font-weight: bold;
+       margin-top: 20px;
+       justify-content: center;
+   }
+   
+   .redes {
+       display: flex;
+       justify-content: center;
+       gap: 65px;
+       margin-top: 20px;
+     }
+   
+   .copyri{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   .copy{
+       width: 12px;
+       height: 12px;
+   }
+   
+   .circle{
+       width: 7px;
+       height: 7px;
+       inline-size: none;
+       margin-left: 15px;
+       align-items: center;
+   }
+   
+   .ter{
+       font-size: 12px;
+       font-family: Inter;
+       margin-left: 15px;
+       text-align: center;
+       font-weight: 600;
+   }
+   
+   .pol{
+       font-size: 12px;
+       font-family: Inter;
+       margin-left: 14px;
+       text-align: center;
+       font-weight: 600;
+   }

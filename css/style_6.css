@@ -55,6 +55,7 @@ ion-icon{
     position: relative;
     left: 6px;
     cursor: pointer;
+    margin: 0 15px;
 }
 
 ion-icon:hover{

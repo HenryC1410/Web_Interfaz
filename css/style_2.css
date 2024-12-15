@@ -11,31 +11,153 @@ body{
     min-height: 100vh;
 }
 
-
-header .navbar{
-    justify-content: center;
+header{
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-
+    padding: 0 5%;
+    height: 100px;
+    background-color:#EB455F ;
 }
 
-.navbar ion-icon{
+.logo{
+    height: 100px;
+}
+
+.menu{
+    display: flex;
     justify-content: center;
     align-items: center;
-    top: 18px;
-    width: 50px;
-    height: 50px;
+}
+
+.item{
+    padding: 10px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.item:hover{
+    color: #fff;
+}
+
+#menu{
+    display: none;
+}
+
+.menu_ion{
+    width: 35px;
+    height: 35px;
+    color: #000;
     position: relative;
+    left: 6px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.menu_ion:hover{
+    color: #FFFFFF;
 }
 
 
-.btn-3{
-    background: #454545;
-    color: #FFFF;
+label{
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilo del contenedor dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Ocultar el menú desplegable por defecto */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Estilo para mostrar el menú cuando tiene la clase 'show' */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Estilo de los elementos del menú */
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+/* Cambiar color al pasar el cursor */
+.dropdown-menu li:hover {
+    background-color: #f2f2f2;
+}
+
+/* Estilo del overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Contenido del overlay */
+.overlay-content {
+    background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3 ease;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
 }
-.btn-3:hover{
-    background-color: #5c5b5b;
+
+/* Botones del overlay */
+.overlay-buttons {
+    margin-top: 20px;
+}
+
+.overlay-buttons .btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay-buttons .btn:first-child {
+    background-color: #f44336; /* Botón de confirmar (rojo) */
+    color: white;
+}
+
+.overlay-buttons .btn:last-child {
+    background-color: #ddd; /* Botón de cancelar (gris) */
+    color: black;
+}
+
+.ini{
+    display: none;
 }
 
 .btn{
@@ -119,7 +241,7 @@ form input::placeholder, form textarea::placeholder{
     transition: all 0.3s ease-in-out;
 }
 
-.checkbox-container .checkmark ion-icon {
+.checkbox-container .checkmark .check {
     font-size: 20px;
     color: transparent;
     pointer-events: none;
@@ -130,7 +252,7 @@ form input::placeholder, form textarea::placeholder{
     border-color: #ffc6ff ;
 }
 
-.checkbox-container input[type="checkbox"]:checked + .checkmark ion-icon {
+.checkbox-container input[type="checkbox"]:checked + .checkmark .check {
     color: #000;
 }
 
