@@ -53,14 +53,17 @@ document.addEventListener('click', (event) => {
 
 
 
+// Referencias a los elementos
 const logoutOverlay = document.getElementById('logout-overlay');
 const overlayContent = document.querySelector('.overlay-content');
 const confirmLogout = document.getElementById('confirm-logout');
 const cancelLogout = document.getElementById('cancel-logout');
-const logoutOption = document.querySelector('.dropdown-menu li:nth-child(2) a');
+const logoutOption = document.getElementById('logout-option'); 
+
 
 logoutOption.addEventListener('click', (event) => {
     event.preventDefault(); 
+    profileMenu.classList.remove('show'); 
     logoutOverlay.style.display = 'flex'; 
 });
 
@@ -72,7 +75,7 @@ cancelLogout.addEventListener('click', () => {
 
 confirmLogout.addEventListener('click', () => {
 
-    window.location.href = '../index.html'; 
+    window.location.href = '../index.html';
 });
 
 
@@ -81,4 +84,3 @@ logoutOverlay.addEventListener('click', (event) => {
         logoutOverlay.style.display = 'none'; 
     }
 });
-

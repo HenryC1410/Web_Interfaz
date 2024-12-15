@@ -48,3 +48,32 @@ logoutOverlay.addEventListener('click', (event) => {
         logoutOverlay.style.display = 'none'; 
     }
 });
+
+function showSection(sectionId) {
+    const sections = ['general', 'cambiar', 'notificaciones', 'cerrar'];
+    sections.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+    });
+    document.getElementById(sectionId).classList.remove('hidden');
+
+    const links = document.querySelectorAll('.sidebar a');
+    links.forEach(link => link.classList.remove('active'));
+    event.target.classList.add('active');
+}
+
+function updateProfile() {
+    alert('Los cambios del perfil han sido guardados exitosamente.');
+}
+
+function updatePassword() {
+    alert('La contraseña ha sido actualizada correctamente.');
+}
+
+function updateNotifications() {
+    alert('Las preferencias de notificación han sido guardadas.');
+}
+
+function logout() {
+    alert('Has cerrado sesión correctamente.');
+    window.location.href = '../index.html';
+}
