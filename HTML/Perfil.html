@@ -28,16 +28,25 @@
             <a href="Contacto_sesion.html"><li class="item btn">Contacto</li></a>
             <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
     
-            <!-- Ícono person con menú desplegable activado por clic -->
             <div class="dropdown">
                 <a href="#" class="perfil" id="profile-icon">
                     <ion-icon name="person-outline"></ion-icon>
                 </a>
                 <ul class="dropdown-menu" id="profile-menu">
-                    <li><a href="Perfil.html">Perfil</a></li>
-                    <li><a href="#">Cerrar Sesión</a></li>
+                    
+                    <a href="Perfil.html">
+                        <li>
+                            <ion-icon name="person-circle-outline"></ion-icon> Perfil
+                        </li>
+                    </a>
+                    <a href="#" id="logout-option">
+                        <li>
+                            <ion-icon name="log-out-outline"></ion-icon> Cerrar Sesión
+                        </li>
+                    </a>
                 </ul>
             </div>
+
     
             <a href=""><li class="item ini">Login</li></a>
 
@@ -59,8 +68,93 @@
             </div>
         </ul>
     </header>
-    
 
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h4>Opciones</h4>
+            <a onclick="showSection('general')" class="active">General</a>
+            <a onclick="showSection('cambiar')">Cambiar Contraseña</a>
+            <a onclick="showSection('notificaciones')">Notificaciones</a>
+            <a onclick="showSection('cerrar')">Cerrar Sesión</a>
+        </div>
+        <!-- Main Content -->
+        <div class="user-menu">
+            <!-- General Section -->
+            <div id="general">
+                <h2>Menú de usuario</h2>
+                <div class="profile-pic">
+                    <img src="../imagenes/perfil.jpeg" alt="Foto de perfil">
+                </div>
+                <div class="info-section">
+                    <strong>Usuario:</strong>
+                    <input type="text" value="Ado Daniela Marcillo Franco">
+                </div>
+                <div class="info-section">
+                    <strong>Correo electrónico:</strong>
+                    <input type="email" value="My_Favorite_Song_Usseewa@gmail.com">
+                </div>
+                <div class="info-section">
+                    <strong>Teléfono:</strong>
+                    <input type="text" value="0983902284">
+                </div>
+                <div class="info-section">
+                    <strong>Dirección:</strong>
+                    <input type="text" value="Mi casa">
+                </div>
+                <div class="info-section">
+                    <strong>Forma de Pago:</strong>
+                    <input type="text" value="Tarjeta de crédito">
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </div>
+            <!-- Cambiar Contraseña -->
+            <div id="cambiar" class="hidden">
+                <h2>Cambiar Contraseña</h2>
+                <div class="info-section">
+                    <strong>Contraseña Actual:</strong>
+                    <input type="password">
+                </div>
+                <div class="info-section">
+                    <strong>Nueva Contraseña:</strong>
+                    <input type="password">
+                </div>
+                <div class="info-section">
+                    <strong>Confirmar Nueva Contraseña:</strong>
+                    <input type="password">
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary">Actualizar</button>
+                </div>
+            </div>
+            <!-- Notificaciones -->
+            <div id="notificaciones" class="hidden">
+                <h2>Notificaciones</h2>
+                <div class="info-section">
+                    <strong>Recibir Notificaciones:</strong>
+                    <input type="checkbox" checked> Email
+                </div>
+                <div class="info-section">
+                    <strong>Notificaciones de Promociones:</strong>
+                    <input type="checkbox"> SMS
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+            <!-- Cerrar Sesión -->
+            <div id="cerrar" class="hidden cer">
+                <h2>Cerrar Sesión</h2>
+                <p>Estás seguro que deseas cerrar sesión?</p>
+                <div class="buttons">
+                    <button class="btn btn-danger">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="bajo">
         <section class="Contacto">
             <div>
@@ -110,8 +204,8 @@
                 </div>
             </div>
     </footer>
-    
-    <script src="../JavaScript/script_5.js"></script>
+
+    <script src="../JavaScript/script_6.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
  </body>
