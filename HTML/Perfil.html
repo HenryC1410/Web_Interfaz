@@ -26,22 +26,22 @@
             <a href="Hero_Sesion.html"><li class="item btn">Inicio</li></a>
             <a href="Productos.html"><li class="item btn">Productos</li></a>
             <a href="Contacto_sesion.html"><li class="item btn">Contacto</li></a>
-            <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+            <a href="#"><ion-icon class="se" name="cart-outline"></ion-icon></a>
     
             <div class="dropdown">
                 <a href="#" class="perfil" id="profile-icon">
-                    <ion-icon name="person-outline"></ion-icon>
+                    <ion-icon class="se" name="person-outline"></ion-icon>
                 </a>
                 <ul class="dropdown-menu" id="profile-menu">
                     
                     <a href="Perfil.html">
                         <li>
-                            <ion-icon name="person-circle-outline"></ion-icon> Perfil
+                            <ion-icon class="se" name="person-circle-outline"></ion-icon> Perfil
                         </li>
                     </a>
                     <a href="#" id="logout-option">
                         <li>
-                            <ion-icon name="log-out-outline"></ion-icon> Cerrar Sesión
+                            <ion-icon class="se" name="log-out-outline"></ion-icon> Cerrar Sesión
                         </li>
                     </a>
                 </ul>
@@ -52,10 +52,12 @@
 
             <div id="logout-overlay" class="overlay">
                 <div class="overlay-content">
-                    <h2>¿Estás seguro de que deseas cerrar sesión?</h2>
+                    <h2 class="til">¿Estás seguro de que deseas cerrar sesión?</h2>
+                    <div class="close">
+                        <img src="../imagenes/close_sesion.jpeg" alt="">
+                    </div>
                     <p>Si cierra sesión, perderá algunas funcionalidades de la página:</p>
                     <ul>
-                        <li>- Perder opción del carrito así como agregar productos a este.</li>
                         <li>- Ofertas especiales por ser miembro.</li>
                         <li>- Personalizar pedido.</li>
                         <li>- Productos especiales por temporadas o para los miembros.</li>
@@ -68,7 +70,6 @@
             </div>
         </ul>
     </header>
-
 
     <div class="container">
         <!-- Sidebar -->
@@ -105,10 +106,25 @@
                 </div>
                 <div class="info-section">
                     <strong>Forma de Pago:</strong>
-                    <input type="text" value="Tarjeta de crédito">
+                    <div class="custom-dropdown">
+                        <div class="selected-option" onclick="toggleDropdown()">
+                            <ion-icon class="met" name="card-outline"></ion-icon> Tarjeta Débito
+                        </div>
+                        <div class="dropdown-options hidden">
+                            <div class="dropdown-option" onclick="selectPaymentMethod('paypal')">
+                                <ion-icon class="met" name="logo-paypal"></ion-icon> PayPal
+                            </div>
+                            <div class="dropdown-option" onclick="selectPaymentMethod('debit-card')">
+                                <ion-icon class="met" name="card-outline"></ion-icon> Tarjeta Débito
+                            </div>
+                            <div class="dropdown-option" onclick="selectPaymentMethod('transfer')">
+                                <ion-icon class="met" name="swap-horizontal-outline"></ion-icon> Transferencia
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="buttons">
-                    <button class="btn btn-primary">Guardar Cambios</button>
+                    <button class="btn btn-primary" onclick="saveChanges()">Guardar Cambios</button>
                 </div>
             </div>
             <!-- Cambiar Contraseña -->
@@ -116,18 +132,18 @@
                 <h2>Cambiar Contraseña</h2>
                 <div class="info-section">
                     <strong>Contraseña Actual:</strong>
-                    <input type="password">
+                    <input type="password" id="current-password">
                 </div>
                 <div class="info-section">
                     <strong>Nueva Contraseña:</strong>
-                    <input type="password">
+                    <input type="password" id="new-password">
                 </div>
                 <div class="info-section">
                     <strong>Confirmar Nueva Contraseña:</strong>
-                    <input type="password">
+                    <input type="password" id="confirm-password">
                 </div>
                 <div class="buttons">
-                    <button class="btn btn-primary">Actualizar</button>
+                    <button class="btn btn-primary" onclick="updatePassword()">Actualizar</button>
                 </div>
             </div>
             <!-- Notificaciones -->
@@ -135,14 +151,14 @@
                 <h2>Notificaciones</h2>
                 <div class="info-section">
                     <strong>Recibir Notificaciones:</strong>
-                    <input type="checkbox" checked> Email
+                    <input type="checkbox" id="email-notifications" checked> Email
                 </div>
                 <div class="info-section">
                     <strong>Notificaciones de Promociones:</strong>
-                    <input type="checkbox"> SMS
+                    <input type="checkbox" id="sms-notifications"> SMS
                 </div>
                 <div class="buttons">
-                    <button class="btn btn-primary">Guardar</button>
+                    <button class="btn btn-primary" onclick="saveNotifications()">Guardar</button>
                 </div>
             </div>
             <!-- Cerrar Sesión -->
@@ -150,11 +166,12 @@
                 <h2>Cerrar Sesión</h2>
                 <p>Estás seguro que deseas cerrar sesión?</p>
                 <div class="buttons">
-                    <button class="btn btn-danger">Cerrar Sesión</button>
+                    <button class="btn btn-danger" onclick="logout()">Cerrar Sesión</button>
                 </div>
             </div>
         </div>
     </div>
+
     <footer class="bajo">
         <section class="Contacto">
             <div>

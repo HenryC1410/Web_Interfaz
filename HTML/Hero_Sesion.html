@@ -27,22 +27,22 @@
             <a href="Hero_Sesion.html"><li class="item btn">Inicio</li></a>
             <a href="Productos.html"><li class="item btn">Productos</li></a>
             <a href="Contacto_sesion.html"><li class="item btn">Contacto</li></a>
-            <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+            <a href="#"><ion-icon class="menu_ion" name="cart-outline"></ion-icon></a>
     
             <div class="dropdown">
                 <a href="#" class="perfil" id="profile-icon">
-                    <ion-icon name="person-outline"></ion-icon>
+                    <ion-icon class="menu_ion" name="person-outline"></ion-icon>
                 </a>
                 <ul class="dropdown-menu" id="profile-menu">
                     
                     <a href="Perfil.html">
                         <li>
-                            <ion-icon name="person-circle-outline"></ion-icon> Perfil
+                            <ion-icon class="des" name="person-circle-outline"></ion-icon> Perfil
                         </li>
                     </a>
                     <a href="#" id="logout-option">
                         <li>
-                            <ion-icon name="log-out-outline"></ion-icon> Cerrar Sesión
+                            <ion-icon class="des" name="log-out-outline"></ion-icon> Cerrar Sesión
                         </li>
                     </a>
                 </ul>
@@ -52,7 +52,10 @@
 
             <div id="logout-overlay" class="overlay">
                 <div class="overlay-content">
-                    <h2>¿Estás seguro de que deseas cerrar sesión?</h2>
+                    <h2 class="til">¿Estás seguro de que deseas cerrar sesión?</h2>
+                    <div class="close">
+                        <img src="../imagenes/close_sesion.jpeg" alt="">
+                    </div>
                     <p>Si cierra sesión, perderá algunas funcionalidades de la página:</p>
                     <ul>
                         <li>- Perder opción del carrito así como agregar productos a este.</li>
