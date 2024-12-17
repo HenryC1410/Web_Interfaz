@@ -1,26 +1,35 @@
+// Detecta cambios en el estado de conexión
+function checkConnectionStatus() {
+    if (!navigator.onLine) {
+        // Guarda la URL actual en localStorage
+        localStorage.setItem("lastPage", window.location.href);
 
-const searchInput = document.getElementById('search');
-const searchIcon = document.querySelector('.buscar ion-icon');
-
-
-function redirectToProducts() {
-    const searchValue = searchInput.value;
-    window.location.href = `HTML/Productos.html?query=${encodeURIComponent(searchValue)}`;
+        // Redirige a la página de black_state.html
+        window.location.href = "HTML/black_state.html";
+    }
 }
 
-searchInput.addEventListener('click', redirectToProducts);
-searchIcon.addEventListener('click', redirectToProducts);
+// Al cargar la página black_state.html
+function handleReconnect() {
+    if (navigator.onLine) {
+        // Recupera la última página visitada desde localStorage
+        const lastPage = localStorage.getItem("lastPage");
 
-searchInput.addEventListener('input', (event) => {
-    const query = event.target.value.toLowerCase();
-
-    const elements = document.querySelectorAll('body *');
-
-    elements.forEach(element => {
-        if (element.textContent.toLowerCase().includes(query)) {
-            element.style.backgroundColor = 'yellow'; 
-        } else {
-            element.style.backgroundColor = '';
+        if (lastPage) {
+            // Redirige a la última página visitada
+            window.location.href = lastPage;
         }
-    });
+    }
+}
+
+// Verificar el estado inicial de conexión
+checkConnectionStatus();
+
+// Escuchar eventos de conexión y desconexión
+window.addEventListener("offline", () => {
+    checkConnectionStatus();
+});
+
+window.addEventListener("online", () => {
+    handleReconnect();
 });
