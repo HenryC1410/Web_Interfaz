@@ -278,6 +278,16 @@ form input::placeholder, form textarea::placeholder{
     font-size: 14px;
 }
 
+.checkbox-container a{
+    text-decoration-line: underline;
+}
+
+.checkbox-container a:hover{
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    font-weight: 700;
+}
+
 .checkbox-container input[type="checkbox"] {
     display: none;
 }

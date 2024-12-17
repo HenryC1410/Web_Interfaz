@@ -111,6 +111,34 @@ header{
     color: #FFFFFF;
 }
 
+.relative {
+    position: relative; /* Permite posicionar elementos hijos de manera relativa */
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px; /* Ajusta según el tamaño del ícono */
+    right: -8px; /* Ajusta la posición para alinear con el ícono */
+    background-color: red;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+
 .des{
     width: 35px;
     height: 35px;
@@ -256,6 +284,44 @@ label{
     color: #FFFFFF;
 }
 
+.product-container {
+    position: relative;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.product-container:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Ligero efecto de sombreado */
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 66px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 404px;
+    height: 366px;
+    border-radius: 0.375rem;
+    cursor: pointer;
+}
+
+.product-container:hover .product-overlay {
+    opacity: 1;
+}
+
 .ini{
     display: none;
 }
@@ -320,16 +386,29 @@ label{
     margin-top: 15px;
 }
 
+.cart-count {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
 .image-container {
     position: relative;
     display: inline-block;
     overflow: hidden;
     border-radius: 0.375rem; 
+    cursor: pointer;
 }
 
 .image-container img {
     display: block;
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .group:hover .image-container img {
