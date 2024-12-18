@@ -60,16 +60,16 @@
     </footer>
 
     <script>
-        // Verifica si hay conexión al cargar la página
+       
         if (navigator.onLine) {
-            // Redirige automáticamente si se recupera la conexión
+            
             const lastPage = localStorage.getItem("lastPage");
             if (lastPage) {
                 window.location.href = lastPage;
             }
         }
     
-        // Escucha cambios de conexión
+        
         window.addEventListener("online", () => {
             const lastPage = localStorage.getItem("lastPage");
             if (lastPage) {

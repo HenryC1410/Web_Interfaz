@@ -181,6 +181,38 @@
             </div>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cartCountElement = document.getElementById("cart-count");
+    
+            
+            let cartCount = localStorage.getItem("cartCount") || 0;
+            cartCount = parseInt(cartCount);
+            updateCartCountDisplay(cartCount);
+    
+            
+            const addToCartButtons = document.querySelectorAll(".btn-add-cart");
+            addToCartButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    cartCount++;
+                    localStorage.setItem("cartCount", cartCount); 
+                    updateCartCountDisplay(cartCount);
+                    alert("Producto agregado al carrito");
+                });
+            });
+    
+            
+            function updateCartCountDisplay(count) {
+                if (count > 0) {
+                    cartCountElement.classList.remove("hidden");
+                    cartCountElement.textContent = count;
+                } else {
+                    cartCountElement.classList.add("hidden");
+                }
+            }
+        });
+    </script>
+
     <script src="../JavaScript/script_5.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

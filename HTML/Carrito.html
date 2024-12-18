@@ -26,7 +26,7 @@
     
         <ul class="menu">
             <a href="Hero_Sesion.html"><li class="item btn">Inicio</li></a>
-            <a href="Productos.html"><li class="item btn">Productos</li></a>
+            <a href="Productos_sesion.html"><li class="item btn">Productos</li></a>
             <a href="Contacto_sesion.html"><li class="item btn">Contacto</li></a>
             <a href="Carrito.html" class="relative">
                 <ion-icon class="menu_ion" name="cart-outline"></ion-icon>
@@ -135,6 +135,38 @@
                 </div>
             </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cartCountElement = document.getElementById("cart-count");
+    
+            
+            let cartCount = localStorage.getItem("cartCount") || 0;
+            cartCount = parseInt(cartCount);
+            updateCartCountDisplay(cartCount);
+    
+            
+            const addToCartButtons = document.querySelectorAll(".btn-add-cart");
+            addToCartButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    cartCount++;
+                    localStorage.setItem("cartCount", cartCount); 
+                    updateCartCountDisplay(cartCount);
+                    alert("Producto agregado al carrito");
+                });
+            });
+    
+            
+            function updateCartCountDisplay(count) {
+                if (count > 0) {
+                    cartCountElement.classList.remove("hidden");
+                    cartCountElement.textContent = count;
+                } else {
+                    cartCountElement.classList.add("hidden");
+                }
+            }
+        });
+    </script>
 
     <script src="../JavaScript/script_10.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

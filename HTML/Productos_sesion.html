@@ -9,35 +9,42 @@
     <meta name="description" content="venta de postres">
     <meta name="OG:image" content="imagenes/Icono.png">
     <meta name="autor" content="Henry">
-    <link rel="stylesheet" href="../css/style_5.css">
+    <link rel="stylesheet" href="../css/style_12.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="w-screen h-screen">
 
     <header id="header">
         <a href="Hero_Sesion.html"><img src="../imagenes/Icono.png" class="logo" alt=""></a>
-    
+
         <input type="checkbox" id="menu">
         <label for="menu">
             <ion-icon name="menu-outline"></ion-icon>
         </label>
-    
+
         <ul class="menu">
-            <a href="Hero_Sesion.html"><li class="item btn">Inicio</li></a>
-            <a href="Productos_sesion.html"><li class="item btn">Productos</li></a>
-            <a href="Contacto_sesion.html"><li class="item btn">Contacto</li></a>
+            <a href="Hero_Sesion.html">
+                <li class="item btn">Inicio</li>
+            </a>
+            <a href="Productos_sesion.html">
+                <li class="item btn">Productos</li>
+            </a>
+            <a href="Contacto_sesion.html">
+                <li class="item btn">Contacto</li>
+            </a>
             <a href="Carrito.html" class="relative">
                 <ion-icon class="menu_ion" name="cart-outline"></ion-icon>
                 <span id="cart-count" class="cart-badge hidden">0</span>
-            </a>            
-    
+            </a>
+
             <div class="dropdown">
                 <a href="#" class="perfil" id="profile-icon">
                     <ion-icon class="menu_ion" name="person-outline"></ion-icon>
                 </a>
                 <ul class="dropdown-menu" id="profile-menu">
-                    
+
                     <a href="Perfil.html">
                         <li>
                             <ion-icon class="des" name="person-circle-outline"></ion-icon> Perfil
@@ -50,8 +57,6 @@
                     </a>
                 </ul>
             </div>
-    
-            <a href=""><li class="item ini">Login</li></a>
 
             <div id="logout-overlay" class="overlay">
                 <div class="overlay-content">
@@ -73,15 +78,16 @@
             </div>
         </ul>
     </header>
-    <main>
-        <h1>Productos</h1>
-        <div class="row">
-            <div class="col-xs-12">
+
+    <main class="product-page">
+        <div class="product-header">
+            <h1 class="text-3xl font-bold">Productos</h1>
+            <div class="filter-section">
                 <form>
                     <input class="search-input" type="search" name="search" placeholder="Busca el producto">
                 </form>
                 <select class="select-order">
-                    <option >Precio más bajo</option>
+                    <option>Precio más bajo</option>
                     <option>Precio más alto</option>
                     <option>Por descuento</option>
                     <option>Por opiniones</option>
@@ -89,10 +95,235 @@
             </div>
         </div>
 
-        <div class="row">
-            <a href="#" class="col-m-4 col-s-6 product-box">
-                <img src="../imagenes/producto_1.png" alt="producto 1">
-            </a>
+        <div class="product-grid" id="product-details">
+            <!-- Productos se insertan dinámicamente -->
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_1.png" alt="Producto 1">
+                <div class="product-details">
+                    <h3>Fresas con crema</h3>
+                    <p>Precio: $1.50</p>
+                    <button class="btn-details" data-id="1">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="1">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_2.jpg" alt="Producto 2">
+                <div class="product-details">
+                    <h3>Batido de fres</h3>
+                    <p>Precio: $2.50</p>
+                    <button class="btn-details" data-id="2">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="2">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_3.jpeg" alt="Producto 3">
+                <div class="product-details">
+                    <h3>Pinchos de fresas</h3>
+                    <p>Precio: $0.50</p>
+                    <button class="btn-details" data-id="3">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="3">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_4.jpg" alt="Producto 4">
+                <div class="product-details">
+                    <h3>Batido de durazno</h3>
+                    <p>Precio: $2.50</p>
+                    <button class="btn-details" data-id="4">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="4">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_5.jpg" alt="Producto 5">
+                <div class="product-details">
+                    <h3>Durazno con crema</h3>
+                    <p>Precio: $1.25</p>
+                    <button class="btn-details" data-id="5">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="5">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_6.jpg" alt="Producto 6">
+                <div class="product-details">
+                    <h3>Fresas con chocolate</h3>
+                    <p>Precio: $0.50</p>
+                    <button class="btn-details" data-id="6">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="6">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_7.jpg" alt="Producto 7">
+                <div class="product-details">
+                    <h3>Pastel de fresas</h3>
+                    <p>Precio: $12</p>
+                    <button class="btn-details" data-id="7">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="7">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_8.jpg" alt="Producto 8">
+                <div class="product-details">
+                    <h3>Pastel de cereza</h3>
+                    <p>Precio: $13</p>
+                    <button class="btn-details" data-id="8">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="8">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_9.jpg" alt="Producto 9">
+                <div class="product-details">
+                    <h3>Pay de piña</h3>
+                    <p>Precio: $8</p>
+                    <button class="btn-details" data-id="9">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="9">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_10.jpg" alt="Producto 10">
+                <div class="product-details">
+                    <h3>Cupcake de caffe</h3>
+                    <p>Precio: $3.50</p>
+                    <button class="btn-details" data-id="10">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="10">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_11.jpg" alt="Producto 11">
+                <div class="product-details">
+                    <h3>Cupcake de frutas</h3>
+                    <p>Precio: $3.50</p>
+                    <button class="btn-details" data-id="11">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="11">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_12.jpg" alt="Producto 12">
+                <div class="product-details">
+                    <h3>Dulces Suspiros</h3>
+                    <p>Precio: $1.25</p>
+                    <button class="btn-details" data-id="12">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="12">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_13.jpg" alt="Producto 13">
+                <div class="product-details">
+                    <h3>Dona de chocolate</h3>
+                    <p>Precio: $3.50</p>
+                    <button class="btn-details" data-id="13">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="13">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_14.jpg" alt="Producto 14">
+                <div class="product-details">
+                    <h3>frutas con crema</h3>
+                    <p>Precio: $1.25</p>
+                    <button class="btn-details" data-id="14">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="14">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_15.jpg" alt="Producto 15">
+                <div class="product-details">
+                    <h3>Tarta de fresas</h3>
+                    <p>Precio: $15</p>
+                    <button class="btn-details" data-id="15">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="15">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_16.jpg" alt="Producto 16">
+                <div class="product-details">
+                    <h3>Batido de ore</h3>
+                    <p>Precio: $2.50</p>
+                    <button class="btn-details" data-id="16">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="16">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_17.jpg" alt="Producto 17">
+                <div class="product-details">
+                    <h3>Mix de frutas</h3>
+                    <p>Precio: $2</p>
+                    <button class="btn-details" data-id="17">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="17">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_18.jpg" alt="Producto 18">
+                <div class="product-details">
+                    <h3>Tarta de arandanos</h3>
+                    <p>Precio: $15</p>
+                    <button class="btn-details" data-id="18">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="18">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_20.jpg" alt="Producto 20">
+                <div class="product-details">
+                    <h3>Helado</h3>
+                    <p>Precio: $3</p>
+                    <button class="btn-details" data-id="20">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="20">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_21.jpg" alt="Producto 21">
+                <div class="product-details">
+                    <h3>Batido de oreo con pan</h3>
+                    <p>Precio: $4.15</p>
+                    <button class="btn-details" data-id="21">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="21">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_22.jpg" alt="Producto 22">
+                <div class="product-details">
+                    <h3>Macarons</h3>
+                    <p>Precio: $3.50</p>
+                    <button class="btn-details" data-id="22">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="22">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_23.jpg" alt="Producto 23">
+                <div class="product-details">
+                    <h3>Cupcake de chocolate con manjar</h3>
+                    <p>Precio: $3.25</p>
+                    <button class="btn-details" data-id="23">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="23">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="im" src="../imagenes/producto_24.jpg" alt="Producto 24">
+                <div class="product-details">
+                    <h3>Cupcake de chocolate y chispitas</h3>
+                    <p>Precio: $3.20</p>
+                    <button class="btn-details" data-id="24">Ver Detalles</button>
+                    <button class="btn-add-cart" data-id="24">Agregar al Carrito</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pagination">
+            <button id="prevPage" class="pagination-btn">Anterior</button>
+            <span id="pageIndicator">1</span>
+            <button id="nextPage" class="pagination-btn">Siguiente</button>
         </div>
     </main>
 
@@ -103,7 +334,7 @@
                 <div class="redes">
                     <div>
                         <a href="https://www.facebook.com/profile.php?id=100011043035570" target="_blank">
-                        <img class="w-[45px] h-[45px] " src="../imagenes/facebook.png" alt="">
+                            <img class="w-[45px] h-[45px] " src="../imagenes/facebook.png" alt="">
                         </a>
                     </div>
                     <div>
@@ -125,30 +356,38 @@
             </div>
         </section>
 
-            <div class="centro">
-                <h2>Disfruta en manta con lo mejor del gusto consteño</h2>
-                <p class="text-[14px] font-[Inter] text-[#454545] font-semibold text-center">Pagina del pueblo para el pueblo(y la nota)</p>
+        <div class="centro">
+            <h2>Disfruta en manta con lo mejor del gusto costeño</h2>
+            <p class="text-[14px] font-[Inter] text-[#454545] font-semibold text-center">Pagina del pueblo para el pueblo(y la nota)</p>
+        </div>
+        <div class="copyri">
+            <img class="copy" src="../imagenes/copyright.svg" alt="">
+            <div>
+                <h3 class="text-[12px] font-[Inter] text-[#000000] font-semibold text-center">copyright 2024, Sweet Moment. Pagina prototipo creado para presentación de Interfaces</h3>
             </div>
-            <div class="copyri">
-                <img class="copy" src="../imagenes/copyright.svg" alt="">
-                <div>
-                    <h3 class="text-[12px] font-[Inter] text-[#000000] font-semibold text-center">copyright 2024, Sweet Moment. Pagina prototipo creado para presentación de Interfaces</h3>
-                </div>
-                <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
-                <div>
-                    <h3 class="pol"><a href="../HTML/Politicas_sesion.html"> Políticas de Privacidad</a></h3>
-                </div>
-                <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+            <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+            </svg>
+            <div>
+                <h3 class="pol"><a href="../HTML/Politicas_sesion.html"> Políticas de Privacidad</a></h3>
+            </div>
+            <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
+            </svg>
 
-                <div>
-                    <h3 class="ter"><a href="../HTML/Terminos_sesion.html">Términos y Condiciones</a></h3>
-                </div>
+            <div>
+                <h3 class="ter"><a href="../HTML/Terminos_sesion.html">Términos y Condiciones</a></h3>
             </div>
+        </div>
     </footer>
+    
 
     <script src="../JavaScript/script_5.js"></script>
+    <script src="../JavaScript/script_9.js"></script>
+    <script src="../JavaScript/script_11.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 
 </html>
