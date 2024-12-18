@@ -51,7 +51,6 @@
                     </a>
                 </ul>
             </div>
-    
 
             <div id="logout-overlay" class="overlay">
                 <div class="overlay-content">
@@ -76,14 +75,14 @@
 
     <main id="cart-container">
         <h1>Carrito de Compras</h1>
-        <a href="Hero_Sesion.html">Volver a la tienda</a>
         <h2>Productos en el carrito:</h2>
         <div id="cart-items"></div>
-        <div id="cart-summary">
+        <div id="cart-summary" class="re">
             <h3>Total: $<span id="total-price">0.00</span></h3>
-            <button id="checkout">Realizar Pedido</button>
+            <button id="checkout-button" class="btn realizar-pedido" disabled>Realizar Pedido</button>
+            <button id="clear-cart">Vaciar Carrito</button>
         </div>
-        <button id="clear-cart">Vaciar Carrito</button>
+        <button><a href="Hero_Sesion.html">Volver a la tienda</a></button>
     </main>
 
 
