@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +9,72 @@
     <meta name="description" content="venta de postres">
     <meta name="OG:image" content="imagenes/Icono.png">
     <meta name="autor" content="Henry">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_5.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="w-screen h-screen">
 
-    <header>
-        <div class="p-10 flex flex-row items-center justify-between w-full h-[150px] bg-[#EB455F]">
-            <!--la clase del menu-->
-            <div class="flex flex-row items-center gap-2.5">
-                <a href="../index.html">
-                    <img class="w-[120px] h-[120px]" src="../imagenes/Icono.png" class="menu-icono" alt="">
+    <header id="header">
+        <a href="Hero_Sesion.html"><img src="../imagenes/Icono.png" class="logo" alt=""></a>
+    
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </label>
+    
+        <ul class="menu">
+            <a href="Hero_Sesion.html"><li class="item btn">Inicio</li></a>
+            <a href="Productos.html"><li class="item btn">Productos</li></a>
+            <a href="Contacto_sesion.html"><li class="item btn">Contacto</li></a>
+            <a href="Carrito.html" class="relative">
+                <ion-icon class="menu_ion" name="cart-outline"></ion-icon>
+                <span id="cart-count" class="cart-badge hidden">0</span>
+            </a>            
+    
+            <div class="dropdown">
+                <a href="#" class="perfil" id="profile-icon">
+                    <ion-icon class="menu_ion" name="person-outline"></ion-icon>
                 </a>
+                <ul class="dropdown-menu" id="profile-menu">
+                    
+                    <a href="Perfil.html">
+                        <li>
+                            <ion-icon class="des" name="person-circle-outline"></ion-icon> Perfil
+                        </li>
+                    </a>
+                    <a href="#" id="logout-option">
+                        <li>
+                            <ion-icon class="des" name="log-out-outline"></ion-icon> Cerrar Sesión
+                        </li>
+                    </a>
+                </ul>
             </div>
-            <div class="navbar">
-                <nav>
-                    <a href="../HTML/Registrarse.html" class="btn btn-1">Registrarse</a>
-                    <a href="../HTML/Inicio.html" class="btn btn-2">Login</a>
-                    <a href="../HTML/Contacto.html" class="btn btn-3">Contacto</a>
-                </nav>
+    
+            <a href=""><li class="item ini">Login</li></a>
+
+            <div id="logout-overlay" class="overlay">
+                <div class="overlay-content">
+                    <h2 class="til">¿Estás seguro de que deseas cerrar sesión?</h2>
+                    <div class="close">
+                        <img src="../imagenes/close_sesion.jpeg" alt="">
+                    </div>
+                    <p>Si cierra sesión, perderá algunas funcionalidades de la página:</p>
+                    <ul>
+                        <li>- Ofertas especiales por ser miembro.</li>
+                        <li>- Personalizar pedido.</li>
+                        <li>- Productos especiales por temporadas o para los miembros.</li>
+                    </ul>
+                    <div class="overlay-buttons">
+                        <button id="confirm-logout" class="btn">Cerrar Sesión</button>
+                        <button id="cancel-logout" class="btn">Cancelar</button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </ul>
     </header>
+
+    <h2>hola mundo</h2>
 
     <footer class="bajo">
         <section class="Contacto">
@@ -72,15 +116,19 @@
                 </div>
                 <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
                 <div>
-                    <h3 class="pol"><a href="../HTML/Politica-Privacidad.html"> Políticas de Privacidad</a></h3>
+                    <h3 class="pol"><a href="../HTML/Politicas_sesion.html"> Políticas de Privacidad</a></h3>
                 </div>
                 <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
 
                 <div>
-                    <h3 class="ter"><a href="../HTML/Terminos-Condiciones.html">Términos y Condiciones</a></h3>
+                    <h3 class="ter"><a href="../HTML/Terminos_sesion.html">Términos y Condiciones</a></h3>
                 </div>
             </div>
     </footer>
-    
+
+    <script src="../JavaScript/script_5.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

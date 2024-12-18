@@ -4,18 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
+    <title>Sweet Moment</title>
+    <link rel="icon" href="../imagenes/Icono.png" type="image/png">
+    <meta name="description" content="venta de postres">
+    <meta name="OG:image" content="imagenes/Icono.png">
+    <meta name="autor" content="Henry">
     <link rel="stylesheet" href="../css/style_10.css">
     <script src="../JavaScript/script_8.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Carrito de Compras</h1>
-        <a href="Hero_Sesion.html">Volver a la tienda</a>
+    <header id="header">
+        <a href="Hero_Sesion.html"><img src="../imagenes/Icono.png" class="logo" alt=""></a>
+    
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <ion-icon name="menu-outline"></ion-icon>
+        </label>
+    
+        <ul class="menu">
+            <a href="Hero_Sesion.html"><li class="item btn">Inicio</li></a>
+            <a href="Productos.html"><li class="item btn">Productos</li></a>
+            <a href="Contacto_sesion.html"><li class="item btn">Contacto</li></a>
+            <a href="Carrito.html" class="relative">
+                <ion-icon class="menu_ion" name="cart-outline"></ion-icon>
+                <span id="cart-count" class="cart-badge hidden">0</span>
+            </a>            
+    
+            <div class="dropdown">
+                <a href="#" class="perfil" id="profile-icon">
+                    <ion-icon class="menu_ion" name="person-outline"></ion-icon>
+                </a>
+                <ul class="dropdown-menu" id="profile-menu">
+                    
+                    <a href="Perfil.html">
+                        <li>
+                            <ion-icon class="des" name="person-circle-outline"></ion-icon> Perfil
+                        </li>
+                    </a>
+                    <a href="#" id="logout-option">
+                        <li>
+                            <ion-icon class="des" name="log-out-outline"></ion-icon> Cerrar Sesión
+                        </li>
+                    </a>
+                </ul>
+            </div>
+    
+
+            <div id="logout-overlay" class="overlay">
+                <div class="overlay-content">
+                    <h2 class="til">¿Estás seguro de que deseas cerrar sesión?</h2>
+                    <div class="close">
+                        <img src="../imagenes/close_sesion.jpeg" alt="">
+                    </div>
+                    <p>Si cierra sesión, perderá algunas funcionalidades de la página:</p>
+                    <ul>
+                        <li>- Ofertas especiales por ser miembro.</li>
+                        <li>- Personalizar pedido.</li>
+                        <li>- Productos especiales por temporadas o para los miembros.</li>
+                    </ul>
+                    <div class="overlay-buttons">
+                        <button id="confirm-logout" class="btn">Cerrar Sesión</button>
+                        <button id="cancel-logout" class="btn">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </ul>
     </header>
 
     <main id="cart-container">
+        <h1>Carrito de Compras</h1>
+        <a href="Hero_Sesion.html">Volver a la tienda</a>
         <h2>Productos en el carrito:</h2>
         <div id="cart-items"></div>
         <div id="cart-summary">
@@ -24,6 +85,61 @@
         </div>
         <button id="clear-cart">Vaciar Carrito</button>
     </main>
+
+
+    <footer class="bajo">
+        <section class="Contacto">
+            <div>
+                <h2 class="text-6xl font-[inknut-antiqua] font-extrabold text-center">Sweet Moment</h2>
+                <div class="redes">
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=100011043035570" target="_blank">
+                        <img class="w-[45px] h-[45px] " src="../imagenes/facebook.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/sweetmoment2207?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                            <img class="w-[45px] h-[45px]" src="../imagenes/Instagram.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://x.com/nikevdash?t=3Yh4bmVMm9xeruv77STl4Q&s=09" target="_blank">
+                            <img class="w-[45px] h-[45px]" src="../imagenes/twitter.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.tiktok.com/@henryc67?is_from_webapp=1&sender_device=pc" target="_blank">
+                            <img class="w-[45px] h-[45px]" src="../imagenes/Tik_Tok.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <div class="centro">
+                <h2>Disfruta en manta con lo mejor del gusto consteño</h2>
+                <p class="text-[14px] font-[Inter] text-[#454545] font-semibold text-center">Pagina del pueblo para el pueblo(y la nota)</p>
+            </div>
+            <div class="copyri">
+                <img class="copy" src="../imagenes/copyright.svg" alt="">
+                <div>
+                    <h3 class="text-[12px] font-[Inter] text-[#000000] font-semibold text-center">copyright 2024, Sweet Moment. Pagina prototipo creado para presentación de Interfaces</h3>
+                </div>
+                <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                <div>
+                    <h3 class="pol"><a href="../HTML/Politicas_sesion.html"> Políticas de Privacidad</a></h3>
+                </div>
+                <svg class="circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+
+                <div>
+                    <h3 class="ter"><a href="../HTML/Terminos_sesion.html">Términos y Condiciones</a></h3>
+                </div>
+            </div>
+    </footer>
+
+    <script src="../JavaScript/script_10.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

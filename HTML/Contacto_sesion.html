@@ -22,12 +22,14 @@
         </label>
     
         <ul class="menu">
-            <a href="Hero_Sesion.html"><li class="item">Inicio</li></a>
-            <a href="Productos.html"><li class="item">Productos</li></a>
-            <a href="Contacto_sesion.html"><li class="item">Contacto</li></a>
-            <a href="#"><ion-icon class="menu_ion" name="cart-outline"></ion-icon></a>
+            <a href="Hero_Sesion.html"><li class="item btn">Inicio</li></a>
+            <a href="Productos_sesion.html"><li class="item btn">Productos</li></a>
+            <a href="Contacto_sesion.html"><li class="item btn">Contacto</li></a>
+            <a href="Carrito.html" class="relative">
+                <ion-icon class="menu_ion" name="cart-outline"></ion-icon>
+                <span id="cart-count" class="cart-badge hidden">0</span>
+            </a>            
     
-            <!-- Ícono person con menú desplegable activado por clic -->
             <div class="dropdown">
                 <a href="#" class="perfil" id="profile-icon">
                     <ion-icon class="menu_ion" name="person-outline"></ion-icon>
@@ -53,7 +55,7 @@
                 <div class="overlay-content">
                     <h2 class="til">¿Estás seguro de que deseas cerrar sesión?</h2>
                     <div class="close">
-                        <img class="ado" src="../imagenes/close_sesion.jpeg" alt="">
+                        <img src="../imagenes/close_sesion.jpeg" alt="">
                     </div>
                     <p>Si cierra sesión, perderá algunas funcionalidades de la página:</p>
                     <ul>

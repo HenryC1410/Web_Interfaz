@@ -1,18 +1,19 @@
- <!DOCTYPE html>
- <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sweet Moment</title>
-        <link rel="icon" href="../imagenes/Icono.png" type="image/png">
-        <meta name="description" content="venta de postres">
-        <meta name="OG:image" content="imagenes/Icono.png">
-        <meta name="autor" content="Henry">
-        <link rel="stylesheet" href="../css/style_7.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
- <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Moment</title>
+    <link rel="icon" href="../imagenes/Icono.png" type="image/png">
+    <meta name="description" content="venta de postres">
+    <meta name="OG:image" content="imagenes/Icono.png">
+    <meta name="autor" content="Henry">
+    <link rel="stylesheet" href="../css/style_5.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-screen h-screen">
 
     <header id="header">
         <a href="Hero_Sesion.html"><img src="../imagenes/Icono.png" class="logo" alt=""></a>
@@ -72,107 +73,28 @@
             </div>
         </ul>
     </header>
+    <main>
+        <h1>Productos</h1>
+        <div class="row">
+            <div class="col-xs-12">
+                <form>
+                    <input class="search-input" type="search" name="search" placeholder="Busca el producto">
+                </form>
+                <select class="select-order">
+                    <option >Precio más bajo</option>
+                    <option>Precio más alto</option>
+                    <option>Por descuento</option>
+                    <option>Por opiniones</option>
+                </select>
+            </div>
+        </div>
 
-    <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <h4>Opciones</h4>
-            <a onclick="showSection('general')" class="active">General</a>
-            <a onclick="showSection('cambiar')">Cambiar Contraseña</a>
-            <a onclick="showSection('notificaciones')">Notificaciones</a>
-            <a onclick="showSection('cerrar')">Cerrar Sesión</a>
+        <div class="row">
+            <a href="#" class="col-m-4 col-s-6 product-box">
+                <img src="../imagenes/producto_1.png" alt="producto 1">
+            </a>
         </div>
-        <!-- Main Content -->
-        <div class="user-menu">
-            <!-- General Section -->
-            <div id="general">
-                <h2>Menú de usuario</h2>
-                <div class="profile-pic">
-                    <img src="../imagenes/perfil.jpeg" alt="Foto de perfil">
-                </div>
-                <div class="info-section">
-                    <strong>Usuario:</strong>
-                    <input type="text" value="Ado Daniela Marcillo Franco">
-                </div>
-                <div class="info-section">
-                    <strong>Correo electrónico:</strong>
-                    <input type="email" value="My_Favorite_Song_Usseewa@gmail.com">
-                </div>
-                <div class="info-section">
-                    <strong>Teléfono:</strong>
-                    <input type="text" value="0983902284">
-                </div>
-                <div class="info-section">
-                    <strong>Dirección:</strong>
-                    <input type="text" value="Mi casa">
-                </div>
-                <div class="info-section">
-                    <strong>Forma de Pago:</strong>
-                    <div class="custom-dropdown">
-                        <div class="selected-option" onclick="toggleDropdown()">
-                            <ion-icon class="met" name="card-outline"></ion-icon> Tarjeta Débito
-                        </div>
-                        <div class="dropdown-options hidden">
-                            <div class="dropdown-option" onclick="selectPaymentMethod('paypal')">
-                                <ion-icon class="met" name="logo-paypal"></ion-icon> PayPal
-                            </div>
-                            <div class="dropdown-option" onclick="selectPaymentMethod('debit-card')">
-                                <ion-icon class="met" name="card-outline"></ion-icon> Tarjeta Débito
-                            </div>
-                            <div class="dropdown-option" onclick="selectPaymentMethod('transfer')">
-                                <ion-icon class="met" name="swap-horizontal-outline"></ion-icon> Transferencia
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button class="btn btn-primary" onclick="saveChanges()">Guardar Cambios</button>
-                </div>
-            </div>
-            <!-- Cambiar Contraseña -->
-            <div id="cambiar" class="hidden">
-                <h2>Cambiar Contraseña</h2>
-                <div class="info-section">
-                    <strong>Contraseña Actual:</strong>
-                    <input type="password" id="current-password">
-                </div>
-                <div class="info-section">
-                    <strong>Nueva Contraseña:</strong>
-                    <input type="password" id="new-password">
-                </div>
-                <div class="info-section">
-                    <strong>Confirmar Nueva Contraseña:</strong>
-                    <input type="password" id="confirm-password">
-                </div>
-                <div class="buttons">
-                    <button class="btn btn-primary" onclick="updatePassword()">Actualizar</button>
-                </div>
-            </div>
-            <!-- Notificaciones -->
-            <div id="notificaciones" class="hidden">
-                <h2>Notificaciones</h2>
-                <div class="info-section">
-                    <strong>Recibir Notificaciones:</strong>
-                    <input type="checkbox" id="email-notifications" checked> Email
-                </div>
-                <div class="info-section">
-                    <strong>Notificaciones de Promociones:</strong>
-                    <input type="checkbox" id="sms-notifications"> SMS
-                </div>
-                <div class="buttons">
-                    <button class="btn btn-primary" onclick="saveNotifications()">Guardar</button>
-                </div>
-            </div>
-            <!-- Cerrar Sesión -->
-            <div id="cerrar" class="hidden cer">
-                <h2>Cerrar Sesión</h2>
-                <p>Estás seguro que deseas cerrar sesión?</p>
-                <div class="buttons">
-                    <button class="btn btn-danger" onclick="logout()">Cerrar Sesión</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <footer class="bajo">
         <section class="Contacto">
@@ -224,8 +146,9 @@
             </div>
     </footer>
 
-    <script src="../JavaScript/script_6.js"></script>
+    <script src="../JavaScript/script_5.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
- </body>
- </html>
+</body>
+
+</html>
