@@ -1,6 +1,6 @@
 Links del proyecto HTML:
 
-repositorio con codigos html, css, js, adicional las imagenes, del propotipo de pagina web de ventas de postre, llamado Sweet Moment, inspirado en un empredimiento del mismo nombre, visistar la cuenta oficial de instagram: https://www.instagram.com/sweetmoment2207?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
+Repositorio con códigos HTML, css, js, adicional las imágenes y el link a la página de figma, del prototipo de página web de ventas de postre, llamado Sweet Moment, inspirado en un emprendimiento del mismo nombre, visistar la cuenta oficial de instagram: https://www.instagram.com/sweetmoment2207?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
 
 
 ------------------------------------------------------------------------------------------------------------------
