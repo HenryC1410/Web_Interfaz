@@ -4,33 +4,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputs = form.querySelectorAll('input:not([type="hidden"]), textarea');
     const termsCheckbox = document.getElementById('terms-checkbox');
 
-    // Función para verificar si todos los campos y el checkbox están completos
     const checkInputs = () => {
         let allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
         let checkboxChecked = termsCheckbox.checked;
-        submitBtn.disabled = !(allFilled && checkboxChecked); // Habilita o deshabilita el botón
+        submitBtn.disabled = !(allFilled && checkboxChecked); 
     };
 
-    // Evento de entrada para validar en tiempo real
+   
     inputs.forEach(input => {
         input.addEventListener('input', checkInputs);
     });
 
     termsCheckbox.addEventListener('change', checkInputs);
 
-    // Evento al enviar el formulario
+    
     form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Previene el envío automático
+        e.preventDefault(); 
         const confirmation = confirm('¿Estás seguro de que deseas enviar este mensaje?');
         if (confirmation) {
             alert('¡Su mensaje fue enviado con éxito!');
-            form.submit(); // Envía el formulario manualmente
+            form.submit(); 
         } else {
             alert('El envío fue cancelado.');
         }
     });
 
-    // Verificar estado inicial
+
     checkInputs();
 });
 
@@ -53,7 +52,7 @@ document.addEventListener('click', (event) => {
 
 
 
-// Referencias a los elementos
+
 const logoutOverlay = document.getElementById('logout-overlay');
 const overlayContent = document.querySelector('.overlay-content');
 const confirmLogout = document.getElementById('confirm-logout');
@@ -85,34 +84,34 @@ logoutOverlay.addEventListener('click', (event) => {
     }
 });
 
-// Detecta cambios en el estado de conexión
+
 function checkConnectionStatus() {
     if (!navigator.onLine) {
-        // Guarda la URL actual en localStorage
+        
         localStorage.setItem("lastPage", window.location.href);
 
-        // Redirige a la página de black_state.html
+        
         window.location.href = "black_state.html";
     }
 }
 
-// Al cargar la página black_state.html
+
 function handleReconnect() {
     if (navigator.onLine) {
-        // Recupera la última página visitada desde localStorage
+        
         const lastPage = localStorage.getItem("lastPage");
 
         if (lastPage) {
-            // Redirige a la última página visitada
+            
             window.location.href = lastPage;
         }
     }
 }
 
-// Verificar el estado inicial de conexión
+
 checkConnectionStatus();
 
-// Escuchar eventos de conexión y desconexión
+
 window.addEventListener("offline", () => {
     checkConnectionStatus();
 });
@@ -125,10 +124,10 @@ window.addEventListener("online", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const cartCountElement = document.getElementById("cart-count");
 
-    // Obtener los productos del carrito almacenados en localStorage
+
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Función para actualizar la cantidad en el contador
+
     function updateCartCount() {
         const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
         if (totalItems > 0) {

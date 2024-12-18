@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const checkoutButton = document.getElementById("checkout-button");
     const clearCartButton = document.getElementById("clear-cart");
 
-    // Cargar carrito desde el localStorage o inicializar vacío
+
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Renderizar el carrito
+
     function renderCart() {
-        cartItemsContainer.innerHTML = ""; // Limpiar productos previos
+        cartItemsContainer.innerHTML = ""; 
         let total = 0;
 
         cart.forEach((item, index) => {
@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         totalPriceElement.textContent = total.toFixed(2);
 
-        // Habilitar o deshabilitar botón de realizar pedido
+
         checkoutButton.disabled = cart.length === 0;
     }
 
-    // Función para actualizar cantidad en el carrito
+
     function updateCart(index, action) {
         if (action === "increase") {
             cart[index].quantity++;
@@ -50,14 +50,14 @@ document.addEventListener("DOMContentLoaded", () => {
         renderCart();
     }
 
-    // Vaciar carrito
+
     clearCartButton.addEventListener("click", () => {
         localStorage.removeItem("cart");
-        cart.length = 0; // Vaciar el array
+        cart.length = 0; 
         renderCart();
     });
 
-    // Listeners para aumentar/disminuir cantidad
+
     cartItemsContainer.addEventListener("click", (e) => {
         const index = e.target.dataset.index;
         if (e.target.classList.contains("increase")) {
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Inicializar el renderizado del carrito
+
     renderCart();
 });
 

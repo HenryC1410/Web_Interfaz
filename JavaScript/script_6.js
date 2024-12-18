@@ -16,8 +16,6 @@ document.addEventListener('click', (event) => {
 });
 
 
-
-// Referencias a los elementos
 const logoutOverlay = document.getElementById('logout-overlay');
 const overlayContent = document.querySelector('.overlay-content');
 const confirmLogout = document.getElementById('confirm-logout');
@@ -144,37 +142,34 @@ const cerrarSesionButton = document.querySelector('.hidden.cer button');
 
 cerrarSesionButton.addEventListener('click', (event) => {
     event.preventDefault(); 
-    logoutOverlay.style.display = 'flex'; // Muestra el overlay
+    logoutOverlay.style.display = 'flex'; 
 });
 
-// Detecta cambios en el estado de conexión
 function checkConnectionStatus() {
     if (!navigator.onLine) {
-        // Guarda la URL actual en localStorage
+
         localStorage.setItem("lastPage", window.location.href);
 
-        // Redirige a la página de black_state.html
+
         window.location.href = "black_state.html";
     }
 }
 
-// Al cargar la página black_state.html
+
 function handleReconnect() {
     if (navigator.onLine) {
-        // Recupera la última página visitada desde localStorage
+
         const lastPage = localStorage.getItem("lastPage");
 
         if (lastPage) {
-            // Redirige a la última página visitada
+
             window.location.href = lastPage;
         }
     }
 }
 
-// Verificar el estado inicial de conexión
 checkConnectionStatus();
 
-// Escuchar eventos de conexión y desconexión
 window.addEventListener("offline", () => {
     checkConnectionStatus();
 });
@@ -187,10 +182,9 @@ window.addEventListener("online", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const cartCountElement = document.getElementById("cart-count");
 
-    // Obtener los productos del carrito almacenados en localStorage
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Función para actualizar la cantidad en el contador
+
     function updateCartCount() {
         const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
         if (totalItems > 0) {
