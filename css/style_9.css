@@ -95,4 +95,21 @@ body .offline-state {
     text-align: center;
     font-weight: 600;
 }
+
+
+.vo {
+    margin-top: 20px;
+    
+}
+.vo a{
+    background-color: #ffe4e1;
+    padding: 12px 12px;
+    color: #000;
+    border-radius: 12px;
+}
+
+.vo a:hover{
+    background-color: bisque;
+    font-weight: 600;
+}
    
