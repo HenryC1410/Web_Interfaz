@@ -20,6 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             id: "3",
             name: "Pinchos de fresas",
+            image: "../imagenes/producto_4.jpg",
+            description: "Batido de duraznos vaso grande",
+            price: 2.5,
+        },
+
+        {
+            id: "4",
+            name: "Batido de durazno",
             image: "../imagenes/producto_3.jpeg",
             description: "Fresas ensartadas bañadas en chocolate negro con decoración.",
             price: 6.0,

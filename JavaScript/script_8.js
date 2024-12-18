@@ -3,17 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalPriceElement = document.getElementById("total-price");
     const checkoutButton = document.getElementById("checkout-button");
     const clearCartButton = document.getElementById("clear-cart");
+    const cartCountElement = document.getElementById("cart-count");
 
-
+  
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
     function renderCart() {
         cartItemsContainer.innerHTML = ""; 
         let total = 0;
+        let totalItems = 0;
 
         cart.forEach((item, index) => {
             total += item.price * item.quantity;
+            totalItems += item.quantity;
 
             const itemElement = document.createElement("div");
             itemElement.className = "cart-item";
@@ -35,10 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
         totalPriceElement.textContent = total.toFixed(2);
 
 
+        updateCartCount(totalItems);
+
+
         checkoutButton.disabled = cart.length === 0;
     }
 
-
+ 
     function updateCart(index, action) {
         if (action === "increase") {
             cart[index].quantity++;
@@ -57,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderCart();
     });
 
-
+ 
     cartItemsContainer.addEventListener("click", (e) => {
         const index = e.target.dataset.index;
         if (e.target.classList.contains("increase")) {
@@ -68,6 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    function updateCartCount(count) {
+        cartCountElement.textContent = count;
+        cartCountElement.classList.toggle("hidden", count === 0);
+    }
+
     renderCart();
 });
-
