@@ -23,14 +23,12 @@ body .offline-state {
 }
 
 .ne {
-    font-size: 64px;
-    margin-bottom: 10px;
+    font-size: 34px;
     font-family: Inria Serif;
     color: #2B3467;
     font-style: italic;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
 }
 
 .offline-state p {
@@ -43,8 +41,8 @@ body .offline-state {
 }
 
 .ad img{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 
 .bajo{

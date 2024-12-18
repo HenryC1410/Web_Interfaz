@@ -1,63 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-/*diseño del escritorio*/
-*{
-    margin: 0;/**/
-    padding: 0;/**/
-    box-sizing: border-box;/**/
-    text-decoration: none;/*elimina las lineas de enlace */
-    list-style: none;/*quita las bolitas de la lista*/
-}
-
-body{
-    font-family: 'inknut-antiqua', sans-serif;/*tipo de letra*/
-}
-
-body{
-    background-color: rgb(233, 186, 186);/*fondo de la pagina*/
-}
-
-
-.promocion{/*del fondo de las fresas*/
-    background-image: linear-gradient(
-        rgb(0,0,0,0.7),
-        rgb(0,0,0,0.7)),
-        url(../imagenes/BG_2.jpg);
-    background-position: center;
-    margin-top: 25px;
-    margin-left: 55px;
-    margin-right: 70px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.oferta{ 
-
-    width: 1370px;
-    height: 460px;
-    padding: 150px;
-}
-
-.oferta h2{
-    font-size: 64px;
-    line-height: 70px;
-    color: #FFFF;
-    margin-left: 190px;
-    font-family: 'inknut-antiqua';
-}
-
-.oferta p{
-    font-size: 32px;
-    line-height: 95px;
-    color: #FFFF;
-    margin-left: 350px;
-    font-family: 'inknut-antiqua';
-}
-
 header{
     width: 100%;
     top: 0;
@@ -284,179 +224,19 @@ label{
     color: #FFFFFF;
 }
 
-.product-container {
-    position: relative;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-.product-container:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* Ligero efecto de sombreado */
-}
-
-.product-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: 66px;
-    margin-left: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 404px;
-    height: 366px;
-    border-radius: 0.375rem;
-    cursor: pointer;
-}
-
-.product-container:hover .product-overlay {
-    opacity: 1;
-}
-
-.prd{
-    width: 404px;
-    height: 366px;
-    border-radius: 6px;
-}
 
 
-.produ{
-    padding: 10px 9px;
-    background-color: #CDB4DB;
-    position: relative;
-    margin: 30px;
-    border-radius: 20px;
-    right: 10px;
-}
 
-.fresas_crem{
-    text-align: center;
-}
-.fresas_crem h3{
-    font-size: 35px;
-    font-family: Inria-Serif;
-    color: #000;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-.fresas_crem p{
-    font-size: 25px;
-    font-family: Inria-Serif;
-    color: #000;
-    margin-top: 15px;
-}
 
-.batido{
-    text-align: center;
-}
-.batido h3{
-    font-size: 35px;
-    font-family: Inria-Serif;
-    color: #000;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-.batido p{
-    font-size: 25px;
-    font-family: Inria-Serif;
-    color: #000;
-    margin-top: 15px;
-}
-
-.pinchos{
-    text-align: center;
-}
-.pinchos h3{
-    font-size: 35px;
-    font-family: Inria-Serif;
-    color: #000;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-.pinchos p{
-    font-size: 25px;
-    font-family: Inria-Serif;
-    color: #000;
-    margin-top: 15px;
-}
-
-.cart-count {
-    background: red;
-    color: white;
-    border-radius: 50%;
-    padding: 2px 8px;
-    font-size: 0.8rem;
-    position: absolute;
-    top: -5px;
-    right: -5px;
-}
-
-.image-container {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    border-radius: 0.375rem; 
-    cursor: pointer;
-}
-
-.image-container img {
-    display: block;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.group:hover .image-container img {
-    transform: scale(1.1);
-}
-
-.btn-4 {
-    background: #A2D2FF;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    position: relative;
-    margin: 10px;
-    border-radius: 4px;
-    padding: 20px 60px;
-    transition: transform 0.3s ease;
-    left: 450px;
-    font-family: Inter;
-    font-weight: 700;
-    text-align: center;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.btn-4:hover {
-    background-color: #BDE0FE;
-    animation: bounce 0.5s;
-}
 
 .bajo{
- background-color: #ffe4e1;
-  background-image: repeating-linear-gradient(70deg, #ffe4e1, #ffe4e1 65px, #fff 50px, #fff 100px);
-  padding: 20px;
-  text-align: center;
-  color: #000;
+    background-color: #ffe4e1;
+     background-image: repeating-linear-gradient(70deg, #ffe4e1, #ffe4e1 65px, #fff 50px, #fff 100px);
+     padding: 20px;
+     text-align: center;
+     color: #000;
 }
-
+   
 .centro h2{
     font-family: Inter;
     text-decoration-color: #454545;
@@ -465,25 +245,25 @@ label{
     margin-top: 20px;
     justify-content: center;
 }
-
+   
 .redes {
     display: flex;
     justify-content: center;
     gap: 65px;
     margin-top: 20px;
-  }
-
+    }
+   
 .copyri{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+   
 .copy{
     width: 12px;
     height: 12px;
 }
-
+   
 .circle{
     width: 7px;
     height: 7px;
@@ -491,7 +271,7 @@ label{
     margin-left: 15px;
     align-items: center;
 }
-
+   
 .ter{
     font-size: 12px;
     font-family: Inter;
@@ -499,7 +279,7 @@ label{
     text-align: center;
     font-weight: 600;
 }
-
+   
 .pol{
     font-size: 12px;
     font-family: Inter;

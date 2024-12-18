@@ -17,6 +17,8 @@ body{
 
 header{
     width: 100%;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +54,7 @@ header{
     display: none;
 }
 
-.se{
+.menu_ion{
     width: 35px;
     height: 35px;
     color: #000;
@@ -62,17 +64,59 @@ header{
     margin: 0 10px;
 }
 
-.se:hover{
+.menu_ion:hover{
     color: #FFFFFF;
 }
 
-header label{
+.relative {
+    position: relative; /* Permite posicionar elementos hijos de manera relativa */
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px; /* Ajusta según el tamaño del ícono */
+    right: -8px; /* Ajusta la posición para alinear con el ícono */
+    background-color: red;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.des{
+    width: 35px;
+    height: 35px;
+    color: #000;
+    position: relative;
+    left: 6px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.des:hover{
+    color: #000;
+}
+
+label{
     cursor: pointer;
     display: none;
 }
 
 /* Estilo del contenedor dropdown */
-header .dropdown {
+.dropdown {
     position: relative;
     display: inline-block;
 }
@@ -101,7 +145,6 @@ header .dropdown {
     text-align: left;
     display: flex;
     align-items: center;
-    
 }
 
 .dropdown-menu li a {
@@ -117,8 +160,6 @@ header .dropdown {
     background-color: #f2f2f2;
     border-radius: 5px;
 }
-
-
 /* Estilo del overlay */
 .overlay {
     position: fixed;

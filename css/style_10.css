@@ -1,7 +1,261 @@
-body {
-    font-family: Arial, sans-serif;
+
+*{
+    margin: 0;/**/
+    padding: 0;/**/
+    box-sizing: border-box;/**/
+    text-decoration: none;/*elimina las lineas de enlace */
+    list-style: none;/*quita las bolitas de la lista*/
+}
+
+body{
+    font-family: 'inknut-antiqua', sans-serif;/*tipo de letra*/
+}
+
+body{
+    background-color: rgb(233, 186, 186);/*fondo de la pagina*/
+}
+
+body main{
     padding: 20px;
 }
+
+header{
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 150px;
+    background-color:#EB455F ;
+}
+
+.logo{
+    height: 130px;
+    width: 130px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    padding: 10px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.item:hover{
+    color: #fff;
+}
+
+#menu{
+    display: none;
+}
+
+.menu_ion{
+    width: 35px;
+    height: 35px;
+    color: #000;
+    position: relative;
+    left: 6px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.menu_ion:hover{
+    color: #FFFFFF;
+}
+
+.relative {
+    position: relative; /* Permite posicionar elementos hijos de manera relativa */
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px; /* Ajusta según el tamaño del ícono */
+    right: -8px; /* Ajusta la posición para alinear con el ícono */
+    background-color: red;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.des{
+    width: 35px;
+    height: 35px;
+    color: #000;
+    position: relative;
+    left: 6px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.des:hover{
+    color: #000;
+}
+
+label{
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilo del contenedor dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Ocultar el menú desplegable por defecto */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    right: 0%;
+}
+
+/* Estilo para mostrar el menú cuando tiene la clase 'show' */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Estilo de los elementos del menú desplegable */
+.dropdown-menu li {
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre icono y texto */
+}
+
+/* Cambiar color al pasar el cursor */
+.dropdown-menu li:hover {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+/* Estilo del overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Contenido del overlay */
+.overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.til{
+
+    font-weight: 800;
+}
+
+.overlay-content ul li{
+    font-weight: 700;
+}
+
+.close{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.close img{
+    width: 140px;
+    height: 140px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Botones del overlay */
+.overlay-buttons {
+    margin-top: 20px;
+}
+
+.overlay-buttons .btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay-buttons .btn:first-child {
+    background-color: #c9a793; /* Botón de confirmar (rojo) */
+    color: black;
+    font-weight: 600;
+}
+
+.overlay-buttons .btn:first-child:hover{
+    background-color: #ff70a6;
+    color: #FFFFFF;
+}
+
+.overlay-buttons .btn:last-child {
+    background-color: #ddd; /* Botón de cancelar (gris) */
+    color: black;
+    font-weight: 600;
+}
+
+.overlay-buttons .btn:last-child:hover{
+    background-color: #d57e87;
+    color: #FFFFFF;
+}
+
+.cart-count {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
 
 #cart-container {
     margin-top: 20px;
@@ -12,6 +266,7 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #FFFFFF;
 }
 
 button {
@@ -25,4 +280,64 @@ button {
 
 button:hover {
     background: #0056b3;
+}
+
+
+.bajo{
+    background-color: #ffe4e1;
+     background-image: repeating-linear-gradient(70deg, #ffe4e1, #ffe4e1 65px, #fff 50px, #fff 100px);
+     padding: 20px;
+     text-align: center;
+     color: #000;
+   }
+   
+.centro h2{
+    font-family: Inter;
+    text-decoration-color: #454545;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+    justify-content: center;
+}
+   
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    margin-top: 20px;
+}
+   
+.copyri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+   
+.copy{
+    width: 12px;
+    height: 12px;
+}
+   
+.circle{
+    width: 7px;
+    height: 7px;
+    inline-size: none;
+    margin-left: 15px;
+    align-items: center;
+}
+   
+.ter{
+    font-size: 12px;
+    font-family: Inter;
+    margin-left: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+   
+.pol{
+    font-size: 12px;
+    font-family: Inter;
+    margin-left: 14px;
+    text-align: center;
+    font-weight: 600;
 }

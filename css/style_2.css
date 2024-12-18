@@ -64,6 +64,34 @@ header{
     color: #FFFFFF;
 }
 
+.relative {
+    position: relative; /* Permite posicionar elementos hijos de manera relativa */
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px; /* Ajusta según el tamaño del ícono */
+    right: -8px; /* Ajusta la posición para alinear con el ícono */
+    background-color: red;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+
 .des{
     width: 35px;
     height: 35px;
@@ -90,7 +118,7 @@ label{
 }
 
 /* Ocultar el menú desplegable por defecto */
-.dropdown .dropdown-menu {
+.dropdown-menu {
     display: none;
     position: absolute;
     background-color: #fff;
@@ -106,7 +134,8 @@ label{
     display: block;
 }
 
-/* Estilo de los elementos del menú desplegable */.dropdown-menu li {
+/* Estilo de los elementos del menú desplegable */
+.dropdown-menu li {
     list-style: none;
     padding: 10px;
     text-align: left;
@@ -114,7 +143,7 @@ label{
     align-items: center;
 }
 
-.dropdown .dropdown-menu li a {
+.dropdown-menu li a {
     text-decoration: none;
     color: #333;
     display: flex;
@@ -127,8 +156,6 @@ label{
     background-color: #f2f2f2;
     border-radius: 5px;
 }
-
-
 /* Estilo del overlay */
 .overlay {
     position: fixed;
@@ -168,7 +195,7 @@ label{
     display: flex;
 }
 
-.ado{
+.close img{
     width: 140px;
     height: 140px;
     margin-top: 10px;
@@ -209,17 +236,23 @@ label{
     background-color: #d57e87;
     color: #FFFFFF;
 }
+.cart-count {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+
 .ini{
     display: none;
 }
 
-.btn{
-    text-decoration: none;
-    padding: 9px 40px;
-    font-size: 15px;
-    position: relative;
-    margin: 10px;
-}
+
 
 form{
     padding: 20px 55px;
