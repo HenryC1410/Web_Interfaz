@@ -182,3 +182,25 @@ window.addEventListener("offline", () => {
 window.addEventListener("online", () => {
     handleReconnect();
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cartCountElement = document.getElementById("cart-count");
+
+    // Obtener los productos del carrito almacenados en localStorage
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Función para actualizar la cantidad en el contador
+    function updateCartCount() {
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        if (totalItems > 0) {
+            cartCountElement.textContent = totalItems;
+            cartCountElement.classList.remove("hidden");
+        } else {
+            cartCountElement.classList.add("hidden");
+        }
+    }
+
+    updateCartCount();
+
+});
